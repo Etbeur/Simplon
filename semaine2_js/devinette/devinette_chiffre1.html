@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <title>JS exos</title>
+</head>
+
+  <script>
+  //On crée la reponse a trouver
+  var chiffre = Math.floor(Math.random() * 10);
+
+  //On pose la question que l'on enregistre dans une variable reponse
+  var reponse = prompt("Donnez un chiffre entre 0 et 9")
+
+  console.log("reponse", reponse)//On affiche la reponse dans la console
+
+    //Si la reponse est juste on félicite et sinon on donne une 2eme chance
+    if(reponse == chiffre){
+      alert("Bravo")
+    } else {
+
+      //Si la reponse est fausse, on donne une deuxième chance
+      reponse = prompt("2eme chance, donnez un chiffre entre 0 et 9")
+
+      //Si c'est juste on félicite et sinon on indique que c'est faux.
+      if(reponse == chiffre){
+        alert("Bravo")
+      } else {
+        alert("Faux, le nombre à trouver était " + chiffre)
+      }
+    }
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+body{
+  padding: 0;
+  margin:0;
+}
+
+nav{
+  background-color: lightgrey;
+  color:grey;
+  padding:2px;
+}
+
+nav li {
+  display: inline;
+  font-size: 1.5em;
+  margin:0 10px;
+}
+
+nav ul{
+  margin-left: 100px;
+}
+
+hr {
+  margin-left: 150px;
+  margin-right: 250px;
+}
+
+h1 {
+  font-size:3em;
+  font-weight: bold;
+  margin-left: 150px;
+}
+
+h1 span {
+  color:grey;
+  font-size: 0.8em;
+}
+
+#bloc{
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+img{
+  display: inline-block;
+  vertical-align: top;
+  padding: 5px 5px 5px 5px;
+}

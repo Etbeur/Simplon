@@ -1,0 +1,81 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+
+hr {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+h1 {
+  font-size: 2em;
+  margin-left: 50px;
+}
+
+h1 span{
+  font-size: 0.6em;
+  color: grey;
+}
+
+nav {
+  background-color: darkblue;
+  color: white;
+  text-align: center;
+  word-spacing: 200px;
+  padding: 10px;
+
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav li {
+  display: inline;
+}
+
+#bloc1 img {
+  float: left;
+  padding-right: 50px;
+  margin-bottom: 20px;
+  margin-left: 50px;
+}
+
+#bloc2 img {
+  float: left;
+  padding-right: 50px;
+  margin-bottom: 20px;
+  margin-left: 50px;
+}
+
+#bloc3 img {
+  float: left;
+  padding-right: 50px;
+  margin-left: 50px;
+}
+
+p{
+  font-size: 0.9em;
+  margin-right: 50px;
+}
+
+#bloc1 {
+  margin-bottom: 140px;
+}
+
+#bloc2 {
+  margin-bottom: 160px;
+}
+
+h3 {
+  padding-top: 20px;
+  margin-bottom: -15px;
+}
+
+button {
+  background-color: darkblue;
+  border-radius: 5px;
+  color: white;
+  padding:4px 8px 4px 8px;
+}
