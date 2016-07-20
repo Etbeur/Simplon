@@ -1,0 +1,158 @@
+body{
+  background-color: #E6E6FA;
+}
+
+header{
+  background: url('images/accueil/image_accueil.jpg');
+  height: 100%;
+}
+
+header img {
+    width: 100px;
+    height: 50px;
+    margin-top:0px;
+    margin-left: 0px;
+}
+
+header p{
+  color: #F0FFFF;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 40px;
+}
+
+header h1{
+  color: #F0FFFF;
+  font-size: 4em;
+  color:white;
+  text-align: center;
+  margin-top: 100px;
+}
+header input{
+  padding:10px 20px 10px 20px;
+}
+nav {
+  float: right;
+}
+
+nav ul{
+  margin-top: 0px;
+  color: white;
+}
+
+nav li{
+  display: inline-block;
+  padding:5px 20px 5px 20px;
+  margin-top: 3%;
+}
+
+.hote{
+  border: solid white 2px;
+  border-radius: 3px;
+}
+
+a {
+  text-decoration: none;
+  color:white;
+
+}
+.boutton{
+  background: rgba(0,0,0,0.5);
+  margin-top: 11%;
+  padding-top:3%;
+  padding-bottom: 3%;
+  padding-left: 10%;
+
+}
+
+
+#cadre input {
+  padding:10px 60px 10px 60px;
+  background-color: #008B8B;
+  color: white;
+  border-radius: 3px;
+  border-color: #008B8B;
+  font-weight: bold;
+}
+.sous_accueil{
+  margin-bottom: 3%;
+}
+
+.sous_accueil img {
+  margin-left: 17.3%;
+  margin-top: 2.4%;
+  padding-right: 2.35%;
+  background-color: white;
+
+
+}
+
+.sous_accueil p{
+  margin-top: 10px;
+  color:darkslategray;
+  margin-bottom: 20px;
+  font-size: 1.2em;
+
+}
+
+.sous_accueil h2{
+  padding-top: 10px;
+  color: darkslategray;
+  font-size: 1.8em;
+}
+
+#cadre{
+  width:280px;
+  height: 305px;
+  float:right;
+  margin-top: 2.4%;
+  margin-right: 18.9%;
+  display: inline-block;
+  background-color: white;
+}
+
+#villes h1{
+  margin-top: 3%;
+  text-align: center;
+  font-size: 2em;
+  color: dimgray;
+}
+
+#villes p{
+  text-align: center;
+  color: dimgray;
+  font-weight: bold;
+  margin-top: -1.5%;
+}
+
+#villes img{
+  display: inline-block;
+  margin-left: 6.5%;
+}
+
+#villes input{
+  display: block;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid silver;
+  padding:12px 60px 12px 60px;
+  color:darkslategray;
+  background-color: white;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+footer{
+  background-color: gray;
+  margin-top: 30px;
+
+}
+
+footer a{
+  margin-left: 20%;
+}
+
+footer p{
+  text-align: center;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Locations saisonnières, maisons, appartements et chambres d'hôte</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <header>
+      <!-- En-tête de la page avec logo et menu de navigation -->
+        <img src="images/accueil/logo_airbnb.jpg" alt="logo airbnb"/>
+
+    <!--Onglets de navigation qui sera en haut à droite -->
+      <nav>
+        <ul>
+          <li class="hote"><a href="#">Devenez hôte</a></li>
+          <li><a href="#">Aide</a></li>
+          <li><a href="#">Inscription</a></li>
+          <li><a href="#">Connexion</a></li>
+        </ul>
+      </nav>
+      <h1>VIVEZ LA-BAS</h1>
+      <p>Réservez des logements auprès d'hôtes locaux dans plus de 191 pays et vivez là-bas, comme chez vous.</p>
+
+    <!-- Espace de recherche de villes, choix de dates et nombre de voyageurs -->
+    <div class="boutton">
+        <input type="text" name="Emplacement" list="datalist" placeholder="Où ?">
+        <input placeholder="Arrivée" type="text" onfocus="(this.type='date')"  id="date">
+        <input placeholder="Départ"  type="text" onfocus="(this.type='date')"  id="date">
+        <input type="number" name="nombre" placeholder="Voyageur(s)">
+        <input type="submit" name="rechercher" value="recherche">
+    </div>
+    </header>
+
+    <!-- Première section sous la photo d'accueil avec photo et mini texte à côté avec bouton "estimation de revenus" -->
+    <section class="sous_accueil">
+        <img src="images/accueil/image_sous_accueil.jpg" alt="photo d'un accueil"/>
+      <div id="cadre">
+        <h2>Ouvrez la porte à un voyageur et à une nouvelle vie</h2>
+        <p>Gagnez de l'argent en accueillant des voyageurs.</p>
+        <input type="button" name="Revenus" value="Estimer vos revenus">
+      </div>
+    </section>
+
+    <!-- Deuxieme section avec proposition + images de trois villes pour un voyage -->
+    <section id="villes">
+      <h1>Nouveau ! Les Guides</h1>
+      <p>Découvrez des centaines de bonnes adresses recommandées par les hôtes Airbnb</p>
+      <img src="images/serie_3photos/new_york.jpg" width=300 height=368 alt="New-York"/>
+      <img src="images/serie_3photos/london.jpg" width=300 height=368 alt="Londres"/>
+      <img src="images/serie_3photos/san_francisco.jpg" width=300 height=368 alt="San Francisco"/>
+
+    <!-- bouton sous la première série de 3 photos -->
+      <input type="button" name="Découvrir" value="Découvrir tous les Guides">
+    </section>
+
+    <!-- Troisieme section avec proposition + images de trois villes pour le week-end -->
+    <section id="villes">
+      <h1>Juste pour le week-end</h1>
+      <p>Découvrez de nouveaux logements incroyables près de chez vous.</p>
+      <img src="images/serie_3photos2/montpellier.jpg" width=300 height=368 alt="Montpellier"/>
+      <img src="images/serie_3photos2/annecy.jpg" width=300 height=368 alt="Annecy"/>
+      <img src="images/serie_3photos2/paris.jpg" width=300 height=368 alt="Paris"/>
+
+    <!-- bouton sous la deuxième série de 3 photos -->
+      <input type="button" name="Voir destination" value="Voir toutes les destinations">
+    </section>
+
+    <!-- Footer avec information sur le site basique-->
+    <footer>
+      <a href="#">Nous contacter</a>
+      <a href="#">A propos</a>
+      <a href="#">Pourquoi être hôte</a>
+      <hr>
+
+      <p>Rejoignez nous sur Twitter, Facebook...</p>
+
+    </footer>
+
+
+  </body>
+</html>
