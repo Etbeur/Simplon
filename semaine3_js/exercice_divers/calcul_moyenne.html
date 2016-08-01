@@ -9,10 +9,10 @@
 //Creation d'un mini programme qui va enregistrer 20 notes et en faire la moyenne.
 
 //Création de variables utilisées tout au long du programme
-var i = 0
-var somme = 0
-var tableau_note= []
-var moyenne = 0
+var i = 0;
+var somme = 0;
+var tableau_note= [];
+var moyenne = 0;
 
 
 //Création d'une boucle while afin de récupérer les notes et les stocker
@@ -21,7 +21,7 @@ while(i < 10){
   var note = prompt("Entrez une note entre 0 et 20");
   //Si la note entrée n'est pas un chiffre on affiche une erreur et on repropose la saisie
   if(isNaN(note)){
-    alert("Vous n'avez pas entrer un chiffre");
+    alert("Vous n'avez pas entré un chiffre");
     note;
   //Sinon si le chiffre n'est pas compris entre 0 et 20 on affiche une erreur et on repropose la saisie
   } else if( note < 0 || note > 20){
@@ -44,7 +44,7 @@ for(i = 0; i < tableau_note.length; i++){
 console.log("somme", somme);
 
 //Calcul de la moyenne
-moyenne = somme/tableau_note.length
+moyenne = somme/tableau_note.length;
 console.log("moyenne", moyenne);
 alert("La moyenne est de " + moyenne);
 
