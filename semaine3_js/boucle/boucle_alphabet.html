@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Boucle et boucle!</title>
+</head>
+<body>
+<script type="text/javascript">
+
+//Creation des variables qui seront utilisées
+var reponse = '';
+var alphabet = 'abcdefghijklmnopqrstuvwxyz';
+var nouveauAlphabet = alphabet.split('');
+
+//Vérification que split crée bien un tableau à partir de la variable alphabet d'où on pourra appeler les valeurs
+console.log(nouveauAlphabet);
+
+//Création d'une boucle pour afficher les valeurs du tableau une à une les unes à la suite des autres
+for(var lettre in nouveauAlphabet){
+  reponse += nouveauAlphabet[lettre];
+  console.log('reponse', reponse );
+}
+
+//Variante sans utiliser split
+
+//Creation des variables qui seront utilisées
+var max = 25;
+var reponse2 = '';
+var alphabet2 = 'abcdefghijklmnopqrstuvwxyz';
+
+//Création d'une boucle pour afficher les valeurs du tableau une à une les unes à la suite des autres
+for(var i = 0; i <= max; i++){
+  reponse2 += alphabet2[i];
+  console.log('reponse variante donne', reponse2 );
+}
+
+
+</script>
+
+
+</body>
+</html>

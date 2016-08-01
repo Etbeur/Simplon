@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Calcul mental</title>
+</head>
+<body>
+<script type="text/javascript">
+//définition de fonctions d'opération afin de facilité la mise en place de calcul mental
+var reponse_ok = 1;
+
+function calcul_random(){
+  var array = [addition(), soustraction(), multiplication()];
+  var choix_calcul = array[Math.floor(Math.random() * array.length)];
+  question = prompt("Devinez combien fait " + choix_calcul);
+  reponse();
+
+  //Fonction pour l'addition
+  function addition(valeur1, valeur2){
+    var valeur1 = Math.floor(Math.random() * 10);
+    var valeur2 = Math.floor(Math.random() * 10);
+    reponseA = valeur1 + valeur2;
+    return(valeur1 + "+" + valeur2);
+  };
+
+  //Fonction pour la soustraction
+  function soustraction(valeur1, valeur2){
+    var valeur1 = Math.floor(Math.random() * 10);
+    var valeur2 = Math.floor(Math.random() * 10);
+    reponseS = valeur1 - valeur2;
+    return(valeur1 + "-" + valeur2);
+  };
+
+  //Fonction pour la multiplication
+  function multiplication(valeur1, valeur2){
+    var valeur1 = Math.floor(Math.random() * 10);
+    var valeur2 = Math.floor(Math.random() * 10);
+    reponseM = valeur1 * valeur2;
+    return(valeur1 + "*" + valeur2);
+  };
+
+  //Fonction réponse
+  function reponse(){
+    if (question == reponseA || question == reponseS || question == reponseM){
+      confirm("Bravo, bonne réponse!");
+      alert("Bonne réponse de suite: " + reponse_ok);
+      //Proposition d'effectuer un autre calcul
+      continuer = prompt("Voulez-effectuer un autre calcul?");
+      //Si oui on appel de nouveau calcul_random()
+        if (continuer.toLowerCase() == "oui"){
+          reponse_ok += 1;
+          return calcul_random();
+          //Sinon on quitte
+        }else {
+          alert("Merci d'avoir joué!");
+        };
+        //Si c'est faux on repose automatiquement un nouveau calcul en appelant calcul_random()
+    } else {
+      alert("Faux");
+      return calcul_random();
+    };
+  };
+}
+
+//Appel de la fonction calcul_random
+calcul_random();
+
+
+</script>
+
+
+</body>
+</html>

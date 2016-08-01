@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Fizz Buzz</title>
+</head>
+<body>
+<script type="text/javascript">
+//Creation d'un boucle qui affiche "Fizz", "Buzz" ou "FizzBuzz" suivant les circonstances
+
+for(var i = 0; i <= 100; i++){
+  //Si le chiffre est multiple de 5 et 7 on affiche FizzBuzz
+  if(i % 5 == 0 && i % 7 == 0){
+  console.log(i, "FizzBuzz");
+  //Sinon si le chiffre est un multiple de 5 on affiche Fizz
+  } else if(i % 5 == 0){
+    console.log(i, "Fizz");
+  //Sinon si le chiffre est un multiple de 7 on affiche Buzz
+} else if(i % 7 == 0){
+  console.log(i, "Buzz");
+  //Sinon on affiche la valeur de i
+  } else {
+    console.log("i vaut", i);
+  }
+}
+
+</script>
+
+
+</body>
+</html>

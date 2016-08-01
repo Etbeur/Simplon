@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Moyenne</title>
+</head>
+<body>
+<script type="text/javascript">
+//Creation d'un mini programme qui va enregistrer 20 notes et en faire la moyenne.
+
+//Création de variables utilisées tout au long du programme
+var i = 0
+var somme = 0
+var tableau_note= []
+var moyenne = 0
+
+
+//Création d'une boucle while afin de récupérer les notes et les stocker
+while(i < 10){
+  //On demande à l'utilisateur d'entrer une note
+  var note = prompt("Entrez une note entre 0 et 20");
+  //Si la note entrée n'est pas un chiffre on affiche une erreur et on repropose la saisie
+  if(isNaN(note)){
+    alert("Vous n'avez pas entrer un chiffre");
+    note;
+  //Sinon si le chiffre n'est pas compris entre 0 et 20 on affiche une erreur et on repropose la saisie
+  } else if( note < 0 || note > 20){
+    alert("Votre note doit être comprise entre 0 et 20");
+    note;
+  //Sinon le chiffre entré est accepté et est ajouté au tableau
+  }else{
+    tableau_note.push(note);
+  i++;
+  }
+}
+//On vérifie que le tableau a bien été créé
+console.log("tableau", tableau_note);
+
+//Somme de toutes les valeurs du tableau
+for(i = 0; i < tableau_note.length; i++){
+  somme += parseInt(tableau_note[i]);
+}
+console.log("somme", somme);
+
+//Calcul de la moyenne
+moyenne = somme/tableau_note.length
+console.log("moyenne", moyenne);
+alert("La moyenne est de " + moyenne);
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

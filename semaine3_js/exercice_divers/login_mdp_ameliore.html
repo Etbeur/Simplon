@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Login et mdp améliorés</title>
+</head>
+<body>
+<script type="text/javascript">
+//Creation des tableaux id et mot de passe et de la variable pour les tentatives
+var tentative = 0;
+var id =["joe@gmail.com", "toto@gmail.com", "titi@gmail.com"];
+var pass = ["12345", "02468", "54321"];
+
+//Boucle while afin que l'utilisateur n'ai que 4 tentatives de connexion
+while(tentative <= 4){
+  var login = prompt("Entrer votre identifiant");
+  var mdp = prompt("Entrer votre mot de passe");
+
+  //Verification que l'email corresponde bien au mdp indiqué
+  if(login == id[0] && mdp == parseInt(pass[0]) || login == id[1] && mdp == parseInt(pass[1]) || login == id[2] && mdp == parseInt(pass[2])){
+      alert("Bienvenue");
+      break;
+    } else {
+      alert("Login ou mot de passe invalide");
+      tentative += 1;
+    };
+  //Si le nombre d'essaie est égale à 4, on bloque la possibilité de se connecter
+  if(tentative == 4){
+    alert("Vous avez tenté de vous connecter 4 fois, impossibilité de recommencer");
+    break;
+  };
+}
+
+</script>
+
+
+</body>
+</html>
