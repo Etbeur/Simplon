@@ -9,6 +9,7 @@
 //définition de fonctions d'opération afin de facilité la mise en place de calcul mental
 var reponse_ok = 1;
 
+//Fonction qui gèrera le choix de l'opération et fera la proposition de calcul
 function calcul_random(){
   var array = [addition(), soustraction(), multiplication()];
   var choix_calcul = array[Math.floor(Math.random() * array.length)];

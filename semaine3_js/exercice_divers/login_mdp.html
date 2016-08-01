@@ -17,13 +17,16 @@ while(tentative <= 4){
   if(/^[joe]+@[a-z0-9._-]+\.[a-z]{2,6}$/.test(login) && mdp == "12345"){
       alert("Bienvenue");
       tentative = 0
+      //Si le login ou le mdp font moins de 4 caractères
     } else if (login.length < 4 || mdp.length < 4){
       alert("Votre identifiant ou votre mot de passe contient moins de 4 caractères");
       tentative += 1;
+      //Sinon le login ou le mdp est faux
     }else {
       alert("Login ou mot de passe invalide");
       tentative += 1;
     }
+  // Si l'utilisateur se trompe 4 fois dans le login ou le mdp
   if(tentative == 4){
     alert("Vous avez tenté de vous connecter 4 fois, impossibilité de recommencer");
     break;
