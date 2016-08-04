@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Formulaire inscription</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <header>
+      <!-- En-tête de la page avec menu de navigation -->
+      <nav>
+          <a id="connecter" href="#">LOG IN</a>
+          <a id="enregistrer" href="#">SIGN UP</a>
+      </nav>
+    </header>
+
+    <form>
+    <h1>Bienvenue</h1>
+
+
+    <section>
+      <h2>Information de connexion</h2>
+      <p>Les champs obligatoires sont suivis d'un <strong><abbr title="obligatoire">*</abbr></strong>.</p>
+
+      <fieldset>
+        <p id="connexion_reussie"></p>
+      <p>
+        <label for="email">
+          <span>Adresse mail : </span>
+          <input placeholder="Entrez votre adresse e-mail" type="email" id="email" name="courrielUtilisateur" required />
+          <strong><abbr title="obligatoire">*</abbr></strong>
+        </label>
+      </p>
+
+       <p>
+        <label for="mdp">
+          <span>Mot de passe : </span>
+          <input placeholder="Entrez votre mot de passe"type="password" id="mdp" name="mdpUtilisateur" required />
+          <strong><abbr title="obligatoire">*</abbr></strong>
+        </label>
+
+      </p>
+      <label for="box">
+        <input type="checkbox" id="box" name="memoriserMdp"checked/>
+        <span id="memo">Mémoriser mot de passe</span>
+      </label>
+
+      <p>
+      <a href="#" id="mdpPerdu">Mot de passe oublié?</a>
+    </p>
+
+
+    <input type="submit" id="valider" name="validerEntrée"/>
+    </section>
+
+
+
+  </body>
+</html>

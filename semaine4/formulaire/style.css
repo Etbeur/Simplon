@@ -1,0 +1,68 @@
+body{
+  background-image: url('sonic.jpg');
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+
+#connecter{
+  text-decoration: none;
+  color:red;
+  position:absolute;
+  top:30px;
+  right:30px;
+  border: 2px solid red;
+  padding: 8px 10px 8px 10px
+}
+
+#enregistrer{
+  text-decoration: none;
+  color:red;
+  position:absolute;
+  top:30px;
+  right:120px;
+  border: 2px solid red;
+  padding: 8px 10px 8px 10px
+}
+
+form{
+  color: white;
+  margin-top: 100px;
+}
+
+h1{
+  text-align: center;
+  margin-top: 20px;
+}
+
+section, h2 + p{
+  text-align: center;
+  margin-top: -10px;
+}
+
+fieldset{
+  width:400px;
+  height: 190px;
+  margin: auto;
+  margin-top: 30px;
+  box-shadow: 2px 3px 3px 2px;
+  border-radius: 5px;
+}
+
+#mdpPerdu{
+  text-decoration: none;
+  color: white;
+  font-size: 0.8em;
+}
+
+#mdpPerdu:hover{
+  color:red;
+}
+
+#memo{
+  margin-right: 110px;
+}
+
+#valider{
+  color:blue;
+  background-color: red;
+}

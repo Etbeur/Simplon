@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulaire et inscription</title>
+</head>
+<body>
+<script type="text/javascript">
+
+//Création des variables pour récupérer les id dans le formulaire html
+
+
+
+
+//Creation des variables utiles
+var tab_login = ["roms@gmail.com", "zinc@gmail.com", "jean@gmail.com", "jim@gmail.com"];
+var tab_mdp = ["moi1", "zinc2", "jean3", "jim4"];
+var question1 = "Veuillez saisir votre identifiant";
+var question2 = "Veuillez entrer votre mot de passe";
+var question3 = "Entrez votre mail";
+var question4 = "Entrez votre mot de passe";
+var connexion = prompt(question1);
+
+
+//Si login n'est pas dans le tableau
+if(tab_login.indexOf(connexion) === -1){
+  //On propose à l'utilisateur de s'enregistrer
+  var inscription = prompt("Adresse mail inconnue, souhaitez vous vous inscrire?");
+  if (inscription.toLowerCase() == "oui"){
+    //Si il accepte, création du nouveau mail
+    var nouveau_mail = prompt(question3);
+    //On ajoute le mail au tableau login
+    tab_login.push(nouveau_mail);
+    //On verifie le nouveau tab_log
+    console.log("nouveau login", tab_login);
+    //Création du nouveau mot de passe
+    var nouveau_pass = prompt(question4);
+    //On ajoute le mot de passe au tableau
+    tab_mdp.push(nouveau_pass);
+    //On verifie lenouveau tab_mdp
+    console.log("nouveaux pass", tab_mdp);
+    //Si l'utilisateur refuse de s'incrire, message
+  }else{
+    alert("Nous espérons vous revoir prochainement!");
+  }
+  //Si le login est dans le tableau, on demande le mot de passe
+}else if(tab_login.indexOf(connexion)){
+   var pass = prompt(question2);
+   //Si le mot de passe correspond au même index que le login, la connexion est accepté
+   if(tab_mdp.indexOf(pass) == tab_login.indexOf(connexion)){
+    alert("Bienvenue" + connexion);
+  } else {
+    alert("Erreur de connexion");
+  }
+}
+
+</script>
+
+
+</body>
+</html>
