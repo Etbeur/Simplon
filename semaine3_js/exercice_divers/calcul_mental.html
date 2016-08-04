@@ -17,28 +17,28 @@ function calcul_random(){
   reponse();
 
   //Fonction pour l'addition
-  function addition(valeur1, valeur2){
+  function addition(){
     var valeur1 = Math.floor(Math.random() * 10);
     var valeur2 = Math.floor(Math.random() * 10);
     reponseA = valeur1 + valeur2;
     return(valeur1 + "+" + valeur2);
-  };
+  }
 
   //Fonction pour la soustraction
-  function soustraction(valeur1, valeur2){
+  function soustraction(){
     var valeur1 = Math.floor(Math.random() * 10);
     var valeur2 = Math.floor(Math.random() * 10);
     reponseS = valeur1 - valeur2;
     return(valeur1 + "-" + valeur2);
-  };
+  }
 
   //Fonction pour la multiplication
-  function multiplication(valeur1, valeur2){
+  function multiplication(){
     var valeur1 = Math.floor(Math.random() * 10);
     var valeur2 = Math.floor(Math.random() * 10);
     reponseM = valeur1 * valeur2;
     return(valeur1 + "*" + valeur2);
-  };
+  }
 
   //Fonction réponse
   function reponse(){
@@ -54,13 +54,13 @@ function calcul_random(){
           //Sinon on quitte
         }else {
           alert("Merci d'avoir joué!");
-        };
+        }
         //Si c'est faux on repose automatiquement un nouveau calcul en appelant calcul_random()
     } else {
       alert("Faux");
       return calcul_random();
-    };
-  };
+    }
+  }
 }
 
 //Appel de la fonction calcul_random

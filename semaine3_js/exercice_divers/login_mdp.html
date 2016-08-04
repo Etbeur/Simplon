@@ -7,16 +7,17 @@
 <body>
 <script type="text/javascript">
 //Creation des tableaux login et mot de passe e de la variable pour les tentatives
-var tentative = 0
+var tentative = 0;
 
 //Boucle while afin que l'utilisateur n'ai que 4 tentatives de connexion
 while(tentative <= 4){
-  var login = prompt("Entrer votre identifiant")
-  var mdp = prompt("Entrer votre mot de passe")
+  var login = prompt("Entrer votre identifiant");
+  var mdp = prompt("Entrer votre mot de passe");
   //Utilisation d'un regex afin de vérifier que l'email est correct, puis vérification du mot de passe exact
   if(/^[joe]+@[a-z0-9._-]+\.[a-z]{2,6}$/.test(login) && mdp == "12345"){
       alert("Bienvenue");
-      tentative = 0
+      tentative = 0;
+      break;
       //Si le login ou le mdp font moins de 4 caractères
     } else if (login.length < 4 || mdp.length < 4){
       alert("Votre identifiant ou votre mot de passe contient moins de 4 caractères");
