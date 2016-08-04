@@ -12,32 +12,40 @@
   var nb = Math.floor(Math.random() * 101);
   var cpt = 0;// nb de coups
   var saisie;
-  var msg = "Choisissez un nombre entre 1 et 100";
-  console.log("Le nombre à trouver est " , nb)
+
 
 while(saisie != nb)
   {
-        saisie = prompt(msg);
+        saisie = prompt("Choisissez un nombre entre 1 et 100");
+        saisie = parseInt(saisie);
         cpt++;
- // message a afficher au prochain tour :
-//Si la différence entre la réponse et la saisie est supérieur à 10 et que la saisie est plus grande que le nombre
-        if(saisie  >= nb+10 ){
-            msg = "C'est beaucoup moins";
-//Si la différence entre la réponse et la saisie est supérieur à 10 et que la saisie est plus petite que le nombre
-        } else if (saisie <= nb-10){
-            msg = "C'est beaucoup plus";
-//Si la différence entre la réponse et la saisie est inférieur à 10 et que la saisie est plus petite que le nombre
-        } else if(saisie > nb){
-            msg = "C'est moins";
-//Si la différence entre la réponse et la saisie est inférieur à 10 et que la saisie est plus grande que le nombre
-        } else if (saisie < nb ){
-            msg = "C'est plus";
+        if(isNaN(saisie)){
+          alert("Valeur invalide");
+          break;
+        } else if(saisie > 100 || saisie < 0){
+          alert("Réponse invalide");
         } else {
-//Lorsque la réponse est juste, on l'indique au joueur en lui donnant le nombre de coups qu'il a utilisé
-            alert("Bravo, tu as gagne en " + cpt + " coups !");
-        }
+          if(saisie === nb){
+            alert("Bravo, vous avez gagné en " + cpt + " coups");
+          } else {
+            var indice;
+            var difference = nb - saisie;
 
-     }
+            if (difference > 10){
+              indice = 'beaucoup plus grand';
+            } else if (difference > 0){
+              indice = 'plus grand';
+            } else if (difference < -10){
+              indice = 'beaucoup plus petit';
+            }else {
+              indice = 'plus petit';
+            }
+            alert(indice);
+          }
+        }
+      }
+
+
 
 
 
