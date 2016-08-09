@@ -7,6 +7,11 @@
 <body>
 <script type="text/javascript">
 
+//Création des variables pour récupérer les id dans le formulaire html
+
+
+
+
 //Creation des variables utiles
 var tab_login = ["roms@gmail.com", "zinc@gmail.com", "jean@gmail.com", "jim@gmail.com"];
 var tab_mdp = ["moi1", "zinc2", "jean3", "jim4"];
@@ -43,7 +48,7 @@ if(tab_login.indexOf(connexion) === -1){
    var pass = prompt(question2);
    //Si le mot de passe correspond au même index que le login, la connexion est accepté
    if(tab_mdp.indexOf(pass) == tab_login.indexOf(connexion)){
-    alert("Bienvenue" + connexion);
+    alert("Bienvenue");
   } else {
     alert("Erreur de connexion");
   }
