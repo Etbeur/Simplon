@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Chiffre 0 à 100</title>
+</head>
+<body>
+<script type="text/javascript">
+
+//définition des variables
+
+  var nb = Math.floor(Math.random() * 101);
+  var cpt = 0;// nb de coups
+  var saisie;
+
+
+while(saisie != nb)
+  {
+        saisie = prompt("Choisissez un nombre entre 1 et 100");
+        saisie = parseInt(saisie);
+        cpt++;
+        //Si la saisie n'est pas un nombre
+        if(isNaN(saisie)){
+          alert("Valeur invalide");
+          break;
+          //Si la saisie n'est pas entre 0 et 100
+        } else if(saisie > 100 || saisie < 0){
+          alert("Réponse invalide");
+        } else {
+          //Si réponse juste
+          if(saisie === nb){
+            alert("Bravo, vous avez gagné en " + cpt + " coups");
+            //Sinon
+          } else {
+            //Création de la variable qui donnera un indice au joueur
+            var indice;
+            var difference = nb - saisie;
+
+            //Gestion des différents cas pouvant se présenter en faisant attention à l'ordre
+            if (difference > 10){
+              indice = 'beaucoup plus grand';
+            } else if (difference > 0){
+              indice = 'plus grand';
+            } else if (difference < -10){
+              indice = 'beaucoup plus petit';
+            }else {
+              indice = 'plus petit';
+            }
+            //On affiche l'indice si la réponse n'est pas correcte
+            alert(indice);
+          }
+        }
+      }
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
