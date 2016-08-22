@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Henry 4</title>
+    <link rel="stylesheet" href="style.min.css">
+    <link rel="stylesheet" href="animate.css">
+  </head>
+  <body>
+    <!-- Création d'un formulaire html <-->
+  <form id="myForm">
+    <fieldset>
+      <legend>Question</legend>
+
+      <p id="reponse1" class="animated tada ">
+        De quelle couleur était le cheval blanc d'Henry 4 ?
+      </p>
+      <!-- Bravo ou perdu apparaitront en fonction de la réponse donnée par l'utilisateur. Invisible de base< -->
+      <p id="bravo" class="animated fadeIn" style="display:none">
+        BRAVO
+      </p>
+
+      <p id="perdu" class="animated fadeIn" style="display:none">
+        PERDU
+      </p>
+      <!-- Champ qui permet la validation et la récupération des données avec boutton valider et annuler< -->
+      <div id="reponse">
+        <input id = "chp-reponse" type="text">
+        <input id="button_valider" type="button" value="Valider" onClick="reponse()"/>
+        <input id="button_reset" type="reset" value="Annuler"/>
+      </div>
+    </fieldset>
+  </form>
+  <!-- Chargement du script en fin de page< -->
+<script type="text/javascript" src="henry4.js"></script>
+</body>
+</html>

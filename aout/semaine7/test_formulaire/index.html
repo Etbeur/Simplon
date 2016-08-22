@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Test formulaire</title>
+    <script type="text/javascript" src="test_formulaire.js"></script>
+  </head>
+  <body>
+    <!-- Exemple de création d'un formulaire avec zone texte, bouton radio, envoyer, valider et validation js-->
+  <form>
+    <fieldset>
+      <legend>Identité</legend>
+      <p>
+        <label for="chp-nom">Nom</label>
+        <input id = "chp-nom" type="text">
+      </p>
+
+      <p>
+        <label for="chp-nom">Prenom</label>
+        <input id = "chp-prenom" type="text">
+      </p>
+    </fieldset>
+
+    <p>
+      <label for="chp-nom">Téléphone</label>
+      <input id = "chp-tel" type="text">
+    </p>
+
+    <p>
+      <label for="chp-pass">Mot de passe</label>
+      <input id = "chp-pass" type="password">
+    </p>
+
+    <fieldset>
+        <div >
+          <label for="rbt-lyon">Lyon</label>
+          <input id = "rbt-lyon" type="radio" name="chp-ville" value="69000" checked>
+        </div>
+
+        <div >
+          <label for="rbt-marseille">Marseille</label>
+          <input id = "rbt-marseille" type="radio" name="chp-ville" value="13000">
+        </div>
+
+        <div >
+          <label for="rbt-paris">Paris</label>
+          <input id = "rbt-paris" type="radio" name="chp-ville" value="75000">
+        </div>
+    </fieldset>
+
+    <p>
+      <label for="chx-reglement">Jai bien lu le règlement</label>
+      <input id = "chx-reglement" type="checkbox">
+    </p>
+
+    <select name="cbo-genre" id="cbo-genre">
+          <option value="1">Féminin</option>
+          <option value="2" selected>Masculin</option>
+    </select>
+
+    <button type="submit">Envoyer</button>
+    <button type="reset">Annuler</button>
+    <button type="button" onclick="validForm()">Validation JS</button>
+  </form>
+
+
+
+
+  </body>
+</html>
