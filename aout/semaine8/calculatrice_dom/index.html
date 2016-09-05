@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Calculatrice</title>
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <table id="calculatrice">
+      <caption id="titre">Ma calculatrice</caption>
+      <tr>
+        <td colspan="4"><input type="text" id="resultat" value="0"/></td>
+      </tr>
+      <tr>
+        <td colspan="1"><input type="button" id="CE_button" value="CE" onClick="reset()"/></td>
+        <td colspan="2"><input type="button" id="back_button" value="BACK" onClick="back()"/></td>
+        <td colspan="1"><input type="button" id="modulo_button" value="%" onClick="modulo()"/></td>
+
+      <tr>
+        <td><input class="design" type="button" id="sept" value="7" onClick="tous('sept')"/></td>
+        <td><input class="design" type="button" id="huit" value="8" onClick="tous('huit')"/></td>
+        <td><input class="design" type="button" id="neuf" value="9" onClick="tous('neuf')"/></td>
+        <td><input class="design" type="button" id="div" value="/" onClick="tous('div')"/></td>
+      </tr>
+      <tr>
+        <td><input class="design" type="button" id="quatre" value="4" onClick="tous('quatre')"/></td>
+        <td><input class="design" type="button" id="cinq" value="5" onClick="tous('cinq')"/></td>
+        <td><input class="design" type="button" id="six" value="6" onClick="tous('six')"/></td>
+        <td><input class="design" type="button" id="multiple" value="*" onClick="tous('multiple')"/></td>
+      </tr>
+      <tr>
+        <td><input class="design" type="button" id="un" value="1" onClick="tous('un')"/></td>
+        <td><input class="design" type="button" id="deux" value="2" onClick="tous('deux')"/></td>
+        <td><input class="design" type="button" id="trois" value="3" onClick="tous('trois')"/></td>
+        <td><input class="design" type="button" id="moins" value="-" onClick="tous('moins')"/></td>
+      </tr>
+      <tr>
+        <td><input class="design" type="button" id="zero" value="0" onClick="tous('zero')"/></td>
+        <td><input class="design" type="button" id="point" value="." onClick="tous('point')"/></td>
+        <td><input class="design" type="button" id="egal" value="=" onClick="egal()"/></td>
+        <td><input class="design" type="button" id="plus" value="+" onClick="tous('plus')"/></td>
+      </tr>
+    </table>
+    <script type="text/javascript" src="calculatrice.js" charset="utf-8"></script>
+  </body>
+</html>
