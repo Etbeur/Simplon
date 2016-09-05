@@ -1,9 +1,9 @@
 // Oil Painting
-// Ported from flash project - http://wonderfl.net/c/92Ul
-//
-//
-function OilPainting(){
 
+
+// Constructeur OilPainting
+function OilPainting(){
+// Création des variables utilisées
   var canvas;
 	var context;
 
@@ -15,23 +15,24 @@ function OilPainting(){
 	var dist = {x: 0, y: 0};
 	var colour = '#'+Math.floor(Math.random()*16777215).toString(16);
 
-
+  // Fonction d'initialisation qui sera appelé pour le constructeur OilPainting
 	this.initialize = function(){
 		canvas  = document.getElementById("monCanvas");
 		context = canvas.getContext('2d');
-
+    // Taille de la zone de dessin
 		width = 600;
 		height = 400;
 
 		canvas.width = width;
 		canvas.height = height;
 
+    // Gestion des évènements lors du click souris
 		canvas.addEventListener('mousemove', MouseMove, false);
 		canvas.addEventListener('click', MouseDown, false);
 		canvas.addEventListener('dblclick', MouseDbl, false);
 	};
 
-
+  // Mouvement souris
 	var MouseMove = function(e) {
 		var distance = Math.sqrt(Math.pow(prevPos.x - startPos.x, 2) +
 								 Math.pow(prevPos.y - startPos.y, 2));
@@ -51,7 +52,7 @@ function OilPainting(){
 		prevPos.x = (e.layerX);
 		prevPos.y = (e.layerY);
 
-	   // ------- Draw -------
+	   // Détermination de la taille des traits et du contexte lors du mouvement
 	   var lWidth = (Math.random()+15/10-0.5)*size+(1-Math.random()+25/20-0.5)*size;
 	   context.lineWidth = lWidth;
 	   context.strokeWidth = lWidth;
@@ -74,14 +75,14 @@ function OilPainting(){
 
 	   context.closePath();
 	};
-
+  // Au clique gestion du changement de couleur
 	var MouseDown = function(e) {
 		e.preventDefault();
 		colour = '#'+Math.floor(Math.random()*16777215).toString(16);
 		context.fillStyle = colour;
 	    context.strokeStyle = colour;
 	};
-
+  // Remise à zéro de la zone de dessin au double clique
 	var MouseDbl = function(e) {
 		e.preventDefault();
 		context.clearRect(0, 0, width, height);
@@ -90,6 +91,6 @@ function OilPainting(){
 }
 
 
-
+// création variable à l'aide du constructeur OilPainting et appel de la fonction d'initialisation
 var app = new OilPainting();
 app.initialize();
