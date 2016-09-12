@@ -1,0 +1,133 @@
+// ----------------- Création de variables afin d'optimiser les modifications si besoin -----------------
+$accueil: #ee3439
+$green: #4ee72f
+$blue: #66adf6
+$orange: #f2be23
+
+// ----------------- keyframes pour l'animation des bulles ------------------------------
+@keyframes tourne
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
+
+@-webkit-keyframes tourne
+  0%-
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
+
+body
+  margin: 0 auto
+  padding: 0
+  background-image: url(../../images/fond2.jpg)
+  background-repeat: no-repeat
+  background-size: cover
+  width: 100%
+  height: 100%
+  header
+    h1
+      font-family: cursive, sans-serif
+      text-transform: uppercase
+      font-size: 4em
+      text-align: center
+      color: $accueil
+      margin-top: -1%
+    nav
+      margin: 0
+      padding: 0
+      width: 100%
+      ul
+        text-align: center
+        li
+          margin: 0
+          padding: 0
+          text-decoration: none
+          display: inline-block
+          margin-left: 5%
+          margin-right: 10%
+          font-family: cursive, sans-serif
+        #navPi
+          color: $green
+          font-size: 1.2em
+        #navPi:hover
+          transform: scale(3)
+        #navPython
+          font-size: 1.2em
+          color: $blue
+        #navPython:hover
+          transform: scale(3)
+        #navScratch
+          font-size: 1.2em
+          color: $orange
+        #navScratch:hover
+          transform: scale(3)
+  #description1
+    position: absolute
+    top: 250px
+    text-align: center
+    text-align: justify
+    font-family: cursive, sans-serif
+    font-size: 1em
+    color: $green
+  #description2
+    position: absolute
+    top: 250px
+    text-align: center
+    text-align: justify
+    font-family: cursive, sans-serif
+    font-size: 1em
+    color: $blue
+  #description3
+    position: absolute
+    top: 250px
+    text-align: center
+    text-align: justify
+    font-family: cursive, sans-serif
+    font-size: 1em
+    color: $orange
+  #section1
+    position: absolute
+    left: 250px
+    top: 225px
+    #piImg:hover
+      opacity: 1
+      animation: paused
+      transform: scale(1.5)
+    #piImg
+      opacity: 0.6
+      width: 200px
+      height: 200px
+      border-radius: 50%
+      margin-bottom: 2%
+      animation: tourne 3s linear infinite
+  #section2
+    position: absolute
+    left: 550px
+    top: 225px
+    #pythonImg:hover
+      opacity: 1
+      animation: paused
+      transform: scale(1.5)
+    #pythonImg
+      opacity: 0.6
+      width: 200px
+      height: 200px
+      border-radius: 50%
+      margin-bottom: 2%
+      animation: tourne 3s linear infinite
+  #section3
+    position: absolute
+    left: 850px
+    top: 225px
+    #scratchImg:hover
+      opacity: 1
+      animation: paused
+      transform: scale(1.5)
+    #scratchImg
+      opacity: 0.6
+      width: 200px
+      height: 200px
+      border-radius: 50%
+      margin-bottom: 2%
+      animation: tourne 3s linear infinite

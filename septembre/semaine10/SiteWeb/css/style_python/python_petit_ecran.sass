@@ -1,0 +1,166 @@
+// ----------------- Création de variables afin d'optimiser les modifications si besoin -----------------
+$accueil: #ee3439
+$green: #4ee72f
+$blue: #66adf6
+$orange: #f2be23
+
+// ----------------- keyframes pour l'animation des bulles ------------------------------
+@keyframes tourne
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
+
+@-webkit-keyframes tourne
+  0%-
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
+
+// ------------------------- body -----------------------
+body
+  margin: 0 auto
+  padding: 0
+  background-image: url(../../images/python/fond_python.jpg)
+  background-repeat: no-repeat
+  background-size: cover
+  width: 100%
+  height: 100%
+  a:link
+    text-decoration: none
+  // ----------Header--------------
+  header
+    h1
+      font-family: cursive, sans-serif
+      text-transform: uppercase
+      font-size: 2em
+      text-align: center
+      font-weight: bold
+      color: $accueil
+      margin-top: -1%
+    nav
+      margin: 0
+      padding: 0
+      width: 100%
+      ul
+        margin-right: 10%
+        li
+          text-align: center
+          margin: 0
+          padding: 0
+          display: block
+          font-family: cursive, sans-serif
+        #navHome
+          color: $blue
+          font-size: 1.2em
+        #navHome:hover
+          transform: scale(1.5)
+        #navPi
+          font-size: 1.2em
+          color: $green
+        #navPi:hover
+          transform: scale(1.5)
+        #navScratch
+          font-size: 1.2em
+          color: $orange
+        #navScratch:hover
+          transform: scale(1.5)
+  #descriptionDoc
+    text-align: center
+    font-family: cursive, sans-serif
+    font-size: 0.8em
+    color: $blue
+  #descriptionCommunity
+    text-align: center
+    font-family: cursive, sans-serif
+    font-size: 0.8em
+    color: $blue
+  #descriptionJob
+    text-align: center
+    font-family: cursive, sans-seri
+    font-size: 0.8em
+    color: $blue
+  #descriptionPack
+    text-align: center
+    font-family: cursive, sans-seri
+    font-size: 0.8em
+    color: $blue
+
+  // // -------- Passage de la souris pour cacher l'image et afficher le texte ---------
+
+  // #section1:hover #descriptionDl
+  //   opacity: 1
+  // #section1:hover #dlImg
+  //   opacity: 0
+  // #section2:hover #descriptionCommunity
+  //   opacity: 1
+  // #section2:hover #communityImg
+  //   opacity: 0
+  // #section3:hover #descriptionDoc
+  //   opacity: 1
+  // #section3:hover #docImg
+  //   opacity: 0
+  // #section4:hover #descriptionBlog
+  //   opacity: 1
+  // #section4:hover #blogImg
+  //   opacity: 0
+  #lienSite:hover #piImg
+    opacity: 1
+  #lienSite:hover #click
+    opacity: 0
+    // -------------------------- Fin passage souris ----------------------------------
+
+    // ------------------------ Rond qui tourne avec lien vers site -------------------
+  #lienSite
+    position: absolute
+    left: 250px
+    top: 200px
+    text-align: center
+    #visite
+      opacity: 0
+    #pythonImg:hover
+      opacity: 1
+      animation: paused
+      transform: scale(1.3)
+    #pythonImg
+      position: absolute
+      bottom: 160%
+      right: 150%
+      opacity: 0.4
+      width: 100px
+      height: 100px
+      border-radius: 50%
+      margin-bottom: 2%
+      animation: tourne 3s linear infinite
+    #click
+      position: absolute
+      bottom: 195%
+      left: -90%
+      color: $blue
+      font-weight: bold
+
+  // --------------------- Position des sections et des images ------------------------
+  #section1
+    text-align: center
+    #docImg
+      width: 100px
+      height: 100px
+      border-radius: 50%
+  #section2
+    text-align: center
+    #communityImg
+      width: 100px
+      height: 100px
+      border-radius: 50%
+  #section3
+    text-align: center
+    #jobImg
+      width: 100px
+      height: 100px
+      border-radius: 50%
+  #section4
+    text-align: center
+    #packImg
+      width: 100px
+      height: 100px
+      border-radius: 50%

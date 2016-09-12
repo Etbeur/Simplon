@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Raspberry pi</title>
+    <!-- Pour les personnes qui ont un écran supérieur à 1080px -->
+    <link rel="stylesheet" href="css/style_pi/style_pi.min.css"/ media="screen and (min-width: 1080px)">
+    <!-- Pour les personnes qui ont un écran inférieur à 1080px -->
+    <link rel="stylesheet" href="css/style_pi/pi_petit_ecran.min.css" media="screen and (max-width: 1080px)"/>
+  </head>
+  <body>
+    <header>
+      <h1>RaspberryPI</h1>
+      <nav id="nav">
+        <ul>
+          <a href="index.html"><li id="navHome">Home</li></a>
+          <a href="python.html"><li id="navPython">Python.org</li></a>
+          <a href="scratch.html"><li id="navScratch">Scratch</li></a>
+        </ul>
+      </nav>
+    </header>
+<!-- Image centrale qui permet d'aller sur le site. "visite" s'affiche sur les écrans supérieur à 1080px.
+    "click" s'affiche sur les écrans inférieur à 1080px. -->
+    <section id="lienSite">
+      <a id="pi" href="https://www.raspberrypi.org/" ><img id='piImg' src='images/pi/pi.png' alt="image accueil site"></a>
+      <p id="visite">Passez votre souris sur les images. Cliquer au centre pour visiter<p>
+      <p id="click"> Cliquez ici</p>
+    </section>
+
+<!-- Image et description présent sur la page -->
+      <section id="section1">
+        <p id="descriptionDl">La possibilité de télécharger un OS différent selon l'utilisation que l'on veut faire de sa machine avec de l'aide et des explications.</p>
+        <img src="images/pi/downloadPi.png" alt="image onglet download" id="dlImg"/>
+      </section>
+      <section id="section2">
+        <p id="descriptionCommunity">Une communauté présente partout dans le monde partageant son savoir.</p>
+        <img src="images/pi/communityPi.png" alt="image onglet communaute" id="communityImg"/>
+      </section>
+      <section id="section3">
+        <p id="descriptionDoc">Une documentation complète qui permet d'avancer dans ses projets avec de l'aide ou de trouver une solution en cas de problème.</p>
+        <img src="images/pi/docPi.png" alt="image onglet documentation" id="docImg"/>
+      </section>
+      <section id="section4">
+        <p id="descriptionBlog">Un blog remplit des dernières infos et nouvelles concernant le Raspberry Pi.</p>
+        <img src="images/pi/blogPi.png" alt="image onglet blog" id="blogImg"/>
+      </section>
+
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

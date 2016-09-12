@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Python.org</title>
+    <!-- Pour les personnes qui ont un écran supérieur à 1080px -->
+    <link rel="stylesheet" href="css/style_python/style_python.min.css"/ media="screen and (min-width: 1080px)">
+    <!-- Pour les personnes qui ont un écran inférieur à 1080px -->
+    <link rel="stylesheet" href="css/style_python/python_petit_ecran.min.css" media="screen and (max-width: 1080px)"/>
+  </head>
+  <body>
+    <header>
+      <h1>Python.org</h1>
+      <nav id="nav">
+        <ul>
+          <a href="index.html"><li id="navHome">Home</li></a>
+          <a href="pi.html"><li id="navPi">RaspberryPI</li></a>
+          <a href="scratch.html"><li id="navScratch">Scratch</li></a>
+        </ul>
+      </nav>
+    </header>
+<!-- Image centrale qui permet d'aller sur le site. "visite" s'affiche sur les écrans supérieur à 1080px.
+    "click" s'affiche sur les écrans inférieur à 1080px. -->
+    <section id="lienSite">
+      <a id="pi" href="https://www.python.org/" ><img id='pythonImg' src='images/python/python.png' alt="image accueil site"></a>
+      <p id="visite">Passez votre souris sur les images. Cliquer au centre pour visiter<p>
+      <p id="click"> Cliquez ici</p>
+    </section>
+
+<!-- Image et description présent sur la page -->
+      <section id="section1">
+        <p id="descriptionDoc">Une documentation complète qui permet d'avoir toutes les informations dont vous pourriez avoir besoin.</p>
+        <img src="images/python/pythonDoc.png" alt="image onglet documentation" id="docImg"/>
+      </section>
+      <section id="section2">
+        <p id="descriptionCommunity">Une communauté prête à vous aider que vous ayez un niveau débutant, intermidiaire ou même expert.</p>
+        <img src="images/python/pythonCommunity.png" alt="image onglet communaute" id="communityImg"/>
+      </section>
+      <section id="section3">
+        <p id="descriptionJob">Une page consacrée aux jobs disponibles en Python partout dans le monde.</p>
+        <img src="images/python/pythonJob.png" alt="image onglet Job" id="jobImg"/>
+      </section>
+      <section id="section4">
+        <p id="descriptionPack">Une zone réservée aux paquets et modules Python afin d'améliorer l'expérience utilisateur.</p>
+        <img src="images/python/pythonPack.png" alt="image onglet package index" id="packImg"/>
+      </section>
+
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

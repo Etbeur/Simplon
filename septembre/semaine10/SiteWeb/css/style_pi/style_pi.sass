@@ -1,0 +1,184 @@
+// ----------------- Création de variables afin d'optimiser les modifications si besoin -----------------
+$accueil: #ee3439
+$green: #4ee72f
+$blue: #66adf6
+$orange: #f2be23
+
+// ----------------- keyframes pour l'animation des bulles ------------------------------
+@keyframes tourne
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
+
+@-webkit-keyframes tourne
+  0%-
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
+
+// ------------------------- body -----------------------
+body
+  margin: 0 auto
+  padding: 0
+  background-image: url(../../images/pi/fondPi.jpg)
+  background-repeat: no-repeat
+  background-size: cover
+  width: 100%
+  height: 100%
+  // ----------Header--------------
+  header
+    h1
+      font-family: cursive, sans-serif
+      text-transform: uppercase
+      font-size: 4em
+      text-align: center
+      color: $accueil
+      margin-top: -1%
+    // ----------Barre de navigation--------------
+    nav
+      margin: 0
+      padding: 0
+      width: 100%
+      margin-top: -2%
+      ul
+        text-align: center
+        li
+          margin: 0
+          padding: 0
+          text-decoration: none
+          display: inline-block
+          margin-left: 5%
+          margin-right: 10%
+          font-family: cursive, sans-serif
+        #navHome
+          color: $green
+          font-size: 1.2em
+        #navHome:hover
+          transform: scale(3)
+        #navPython
+          font-size: 1.2em
+          color: $blue
+        #navPython:hover
+          transform: scale(3)
+        #navScratch
+          font-size: 1.2em
+          color: $orange
+        #navScratch:hover
+          transform: scale(3)
+
+  // ------------------- Section avec image centrale qui tourne ------------------
+  #lienSite
+    position: absolute
+    left: 250px
+    top: 200px
+    text-align: center
+    #visite
+      position: absolute
+      top: 95%
+      left: 190%
+      color: $green
+      font-weight: bold
+    #click
+      opacity: 0
+    #piImg:hover
+      opacity: 1
+      animation: paused
+      transform: scale(1.5)
+    #piImg
+      position: relative
+      left: 150%
+      opacity: 0.6
+      width: 200px
+      height: 200px
+      border-radius: 50%
+      margin-bottom: 2%
+      animation: tourne 3s linear infinite
+
+  // ----------------- Position et mise en page des descriptions --------------
+  #descriptionDl
+    position: absolute
+    top: 10%
+    text-align: center
+    font-family: cursive, sans-serif
+    font-size: 1em
+    color: $green
+    opacity: 0
+  #descriptionDoc
+    position: absolute
+    top: 5%
+    text-align: center
+    font-family: cursive, sans-serif
+    font-size: 1em
+    color: $green
+    opacity: 0
+  #descriptionBlog
+    position: absolute
+    top: 20%
+    text-align: center
+    font-family: cursive, sans-serif
+    font-size: 1em
+    color: $green
+    opacity: 0
+  #descriptionCommunity
+    position: absolute
+    top: 20%
+    text-align: center
+    font-family: cursive, sans-serif
+    font-size: 1em
+    color: $green
+    opacity: 0
+
+  // -------- Passage de la souris pour cacher l'image et afficher le texte ---------
+  #section1:hover #descriptionDl
+    opacity: 1
+  #section1:hover #dlImg
+    opacity: 0
+  #section2:hover #descriptionCommunity
+    opacity: 1
+  #section2:hover #communityImg
+    opacity: 0
+  #section3:hover #descriptionDoc
+    opacity: 1
+  #section3:hover #docImg
+    opacity: 0
+  #section4:hover #descriptionBlog
+    opacity: 1
+  #section4:hover #blogImg
+    opacity: 0
+
+  // -------------------------- Fin passage souris ----------------------------------
+
+  // --------------------- Position des sections et des images ------------------------
+  #section1
+    position: absolute
+    top: 20%
+    left: 5%
+  #dlImg
+    width: 200px
+    height: 200px
+    border-radius: 50%
+  #section2
+    position: absolute
+    top: 65%
+    left: 70%
+    #communityImg
+      width: 200px
+      height: 200px
+      border-radius: 50%
+  #section3
+    position: absolute
+    top: 20%
+    left: 80%
+    #docImg
+      width: 200px
+      height: 200px
+      border-radius: 50%
+  #section4
+    position: absolute
+    top: 65%
+    left: 15%
+    #blogImg
+      width: 200px
+      height: 200px
+      border-radius: 50%
