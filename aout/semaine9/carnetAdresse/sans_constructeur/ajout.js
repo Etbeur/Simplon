@@ -5,14 +5,15 @@ var email = document.getElementById('chpMail');
 var gestionnaireContact = {
   contacts:[],
   ajouteContact:function( nom, prenom, mail ){
-    console.log('ajoute');
+    console.log('ajout d\'un contact');
     //  créer un objet nouveauContact avec les valeurs transmises
     var nouveauContact = {
+      id:this.contacts.length + 1,
       mail:mail,
       nom:nom,
       prenom:prenom
     };
-
+    
     //  ajoute nouveauContact à contacts
     this.contacts.push(nouveauContact);
     console.log(this.contacts);
@@ -27,7 +28,7 @@ var gestionnaireContact = {
       var contact = this.contacts[i];
       // crée un élément <li>
       var li = document.createElement('li');
-      li.innerText = contact.nom + " " + contact.prenom + " " + contact.mail;
+      li.innerText = contact.prenom + " " + contact.nom + " " + contact.mail;
       // remplir l'élément avec les infos du contact
       elementListe.appendChild(li);
     }
@@ -39,5 +40,5 @@ var gestionnaireContact = {
     for(var j = elements.length - 1; j >= 0; j --){
       elementListe.removeChild(elements[j]);
     }
-  }
+  },
 };
