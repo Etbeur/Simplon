@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="style.min.css" media="screen" title="no title" charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<body>
+<!-- </p id='intro'>Participez et tentez de gagner ce superbe cadeau en participant à notre jeu concours. Le tirage au sort aura lieu la semaine de noël.*</p> -->
+  <form>
+    <div>
+      <label for="chpPrenom">Prenom</label>
+      <input id="chpPrenom" type="text">
+    </div>
+    <div>
+      <label for="chpNom">Nom</label>
+      <input id=chpNom type="text">
+    </div>
+    <div>
+      <label for="chpMail">Mail</label>
+      <input id=chpMail type="text">
+    </div>
+    <button type="button" onclick="gestionnaireContact.ajouteContact(document.getElementById('chpNom').value, document.getElementById('chpPrenom').value, document.getElementById('chpMail').value)">
+      Ajouter</button>
+  </form>
+
+  <ul id="listeContacts"></ul>
+  <!-- <p id='fin'>* Jeu sans obligation d'achat, un seul participant par foyer et adresse postale. Voir les conditions sur JeVeuxGagnerLaVoiture.com</p> -->
+  <script type="text/javascript" src="ajout.js"></script>
+</body>
+</html>

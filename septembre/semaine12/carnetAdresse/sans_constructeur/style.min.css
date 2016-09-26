@@ -1,0 +1,1 @@
+body{margin:0;padding:0}p{margin-top:20vh}#delete{color:white;font-weight:bold;background-color:#b00000;margin-left:7px;border:1px solid #b00000;border-radius:10px 0 10px 0;box-shadow:3px 3px 5px #b00000}#delete:hover{background-color:#f60000}#delete:active{box-shadow:0 2px 5px #b00000;position:relative;bottom:2px;left:1px}li{margin-top:10px}
