@@ -1,0 +1,126 @@
+@import 'https://fonts.googleapis.com/css?family=PT+Sans+Narrow'
+
+body
+    margin: 0
+    padding: 0
+    width: 100vw
+    height: 100vh
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    .container-canvas
+        position: relative
+        width: 600px
+        height: 600px
+
+        canvas
+            border: 1px solid grey
+            box-shadow: 0 0 10px grey
+            margin: auto
+            position: absolute
+            top: 0
+            left: 0
+
+        .point
+            font-family: 'Helvetica', sans-serif
+            position: absolute
+            color: grey
+
+        .x
+            top: -30px
+            right: -65px
+
+        .x-trait
+            top: -15px
+            right: -80px
+
+        .y
+            bottom: -70px
+            left: -20px
+
+        .y-trait
+            transform: rotate(90deg)
+            bottom: -47px
+            left: -33px
+
+        .zero
+            top: -20px
+            left: -20px
+
+        .y-100
+            top: 93px
+            left: -40px
+
+        .y-200
+            top: 193px
+            left: -40px
+
+        .y-300
+            top: 293px
+            left: -40px
+
+        .y-400
+            top: 393px
+            left: -40px
+
+        .y-500
+            top: 493px
+            left: -40px
+
+        .y-600
+            top: 593px
+            left: -40px
+
+        .x-100
+            top: -30px
+            left: 88px
+
+        .x-200
+            top: -30px
+            left: 188px
+
+        .x-300
+            top: -30px
+            left: 288px
+
+        .x-400
+            top: -30px
+            left: 388px
+
+        .x-500
+            top: -30px
+            left: 488px
+
+        .x-600
+            top: -30px
+            left: 588px
+
+        .btns
+            position: absolute
+            bottom: -60px
+            display: flex
+            flex-direction: row
+            justify-content: space-around
+            left: 50%
+            transform: translateX(-50%)
+
+            .btn-grid
+                height: 35px
+                line-height: 35px
+                width: 70px
+                padding: 0 10px
+                margin: 0 2vw
+                cursor: pointer
+                background-color: white
+                color: #ea1d53
+                font-family: 'PT Sans Narrow', sans-serif
+                border: 1px solid #ea1d53
+                transition: all .2s linear
+                text-align: center
+
+                &:hover
+                    color: white
+                    background-color: #ea1d53
+                    border: 1px solid

@@ -1,0 +1,118 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
+body {
+	font-family: "Helvetica", "Arial", sans-serif;
+	line-height: 1.5;
+	padding: 4em 1em;
+	font-family: "Roboto", sans-serif;
+	background-color: #272822;
+	color: #f8f8f2;
+	position: relative;
+}
+
+#p {
+	margin: 0 auto;
+	max-width: 65em;
+	margin-left: 222px;
+}
+
+input {
+	display: flex;
+	margin: auto;
+	background-color: #272822;
+	border-radius: 8px;
+	font-style: oblique;
+	font-weight: bold;
+	font-family: "Roboto", sans-serif;
+	font-size: 18px;
+	color: #66d9ef;
+	cursor: pointer;
+}
+
+input:hover {
+	opacity: .7;
+	cursor: pointer;
+}
+
+.strong {
+	font-style: oblique;
+	font-weight: bold;
+}
+
+.IT {
+	font-size: 15px;
+	font-style: italic;
+	font-weight: bold;
+	color: #66d9ef;
+}
+
+.surlign {
+	background-color: #ae81ff;
+	font-size: 15px;
+	font-style: italic;
+	font-weight: bold;
+	color: #272822;
+}
+
+.ligneh {
+	font-size: 18px;
+	font-style: italic;
+	font-weight: bold;
+	border-radius: 10px;
+	padding: 2px;
+	background-color: #f92672;
+	max-width: 100px;
+	color: #272822;
+}
+
+.lignej {
+	font-size: 18px;
+	font-style: italic;
+	font-weight: bold;
+	border-radius: 10px;
+	padding: 2px;
+	background-color: #66d9ef;
+	max-width: 150px;
+	color: #272822;
+}
+
+h1 {
+	font-style: oblique;
+	background-color: #e6db74;
+	max-width: 320px;
+	border-radius: 8px;
+	padding: 2px;
+	color: #272822;
+}
+
+h2 {
+	font-style: oblique;
+	background-color: #a6e22e;
+	max-width: 400px;
+	border-radius: 8px;
+	padding: 2px;
+	color: #272822;
+}
+
+h4 {
+	font-style: oblique;
+	background-color: #a6e22e;
+	max-width: 500px;
+	border-radius: 8px;
+	padding: 2px;
+	font-size: 28px;
+	color: #272822;
+}
+
+#back {
+	position: fixed;
+	top: 20px;
+	left: 30px;
+	color: #f2e4fd;
+	font-size: 3vw;
+}
+
+@media screen and (max-width: 700px) {
+	#back {
+		font-size: 5vw;
+	}
+}

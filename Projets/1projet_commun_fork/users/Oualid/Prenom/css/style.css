@@ -1,0 +1,19 @@
+@import '../../../../css/font-awesome-4.6.3/css/font-awesome.min.css';
+
+body {
+    margin:0;
+    position: relative;
+}
+
+.back {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    color: grey;
+    font-size: 4em;
+    cursor: pointer;
+}
+
+.back:hover {
+    color: #ea1d53;
+}

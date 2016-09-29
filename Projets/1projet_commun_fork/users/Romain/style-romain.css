@@ -1,0 +1,57 @@
+@import '../../css/font-awesome-4.6.3/css/font-awesome.min.css';
+@font-face {
+    font-family: 'Give You Glory';
+    src: url(../../fonts/GiveYouGlory.ttf);
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 0;
+}
+
+#container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ea1d53;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.back {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    color: #000;
+    font-size: 4em;
+}
+
+.back:hover {
+    color: #ea1d53;
+}
+
+#container .back a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Helvetica', sans-serif
+}
+
+
+#monCanvas-romain{
+  border: 2px solid white;
+  background-color: black;
+  width: 800px;
+  height: 400px;
+}
+
+.font-romain {
+    font-family: 'Give You Glory', cursive;
+    font-size: 1em;
+    text-align: center;
+    color: white
+}

@@ -1,0 +1,31 @@
+@import '../../../css/font-awesome-4.6.3/css/font-awesome.min.css'
+@import '../../../css/prism.css'
+
+body
+  margin: 0 auto
+  padding: 0
+  position: relative
+
+.back
+  position: absolute
+  top: 20px
+  left: 30px
+  color: #000
+  font-size: 4em
+
+  &:hover
+    color: #ea1d53
+
+#container
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  #monCanvas
+    border: 2px solid black
+    width: 1000px
+    height: 600px
+    margin: 5vh 0
+  pre,
+  code
+    width: 60%

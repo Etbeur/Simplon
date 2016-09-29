@@ -1,0 +1,149 @@
+@import 'https://fonts.googleapis.com/css?family=PT+Sans+Narrow';
+body {
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+body .container-canvas {
+	position: relative;
+	width: 600px;
+	height: 600px;
+}
+
+body .container-canvas canvas {
+	border: 1px solid grey;
+	box-shadow: 0 0 10px grey;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+body .container-canvas .point {
+	font-family: 'Helvetica', sans-serif;
+	position: absolute;
+	color: grey;
+}
+
+body .container-canvas .x {
+	top: -30px;
+	right: -65px;
+}
+
+body .container-canvas .x-trait {
+	top: -15px;
+	right: -80px;
+}
+
+body .container-canvas .y {
+	bottom: -70px;
+	left: -20px;
+}
+
+body .container-canvas .y-trait {
+	transform: rotate(90deg);
+	bottom: -47px;
+	left: -33px;
+}
+
+body .container-canvas .zero {
+	top: -20px;
+	left: -20px;
+}
+
+body .container-canvas .y-100 {
+	top: 93px;
+	left: -40px;
+}
+
+body .container-canvas .y-200 {
+	top: 193px;
+	left: -40px;
+}
+
+body .container-canvas .y-300 {
+	top: 293px;
+	left: -40px;
+}
+
+body .container-canvas .y-400 {
+	top: 393px;
+	left: -40px;
+}
+
+body .container-canvas .y-500 {
+	top: 493px;
+	left: -40px;
+}
+
+body .container-canvas .y-600 {
+	top: 593px;
+	left: -40px;
+}
+
+body .container-canvas .x-100 {
+	top: -30px;
+	left: 88px;
+}
+
+body .container-canvas .x-200 {
+	top: -30px;
+	left: 188px;
+}
+
+body .container-canvas .x-300 {
+	top: -30px;
+	left: 288px;
+}
+
+body .container-canvas .x-400 {
+	top: -30px;
+	left: 388px;
+}
+
+body .container-canvas .x-500 {
+	top: -30px;
+	left: 488px;
+}
+
+body .container-canvas .x-600 {
+	top: -30px;
+	left: 588px;
+}
+
+body .container-canvas .btns {
+	position: absolute;
+	bottom: -60px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+body .container-canvas .btns .btn-grid {
+	height: 35px;
+	line-height: 35px;
+	width: 70px;
+	padding: 0 10px;
+	margin: 0 2vw;
+	cursor: pointer;
+	background-color: white;
+	color: #ea1d53;
+	font-family: 'PT Sans Narrow', sans-serif;
+	border: 1px solid #ea1d53;
+	transition: all .2s linear;
+	text-align: center;
+}
+
+body .container-canvas .btns .btn-grid:hover {
+	color: white;
+	background-color: #ea1d53;
+	border: 1px solid;
+}

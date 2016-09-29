@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ateliers Canvas</title>
+    <link rel="stylesheet" href="design_tuto/designtuto.min.css">
+    <link rel="stylesheet" href="couleur/coloration.css">
+    <link rel="stylesheet" href="menufix/menufix.css">
+    <link rel="stylesheet" href="../../../css/font-awesome-4.6.3/css/font-awesome.min.css" media="screen" title="no title" charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../../../pix/favicon.png" />
+</head>
+<header>
+    <div id="header" class="container">
+        <nav>
+            <ul>
+                <a href="#1">
+                    <li class="animated fadeIn"><span class="navtext">C</span>anvas</li>
+                </a>
+                <a href="#2">
+                    <li class="animated fadeIn"><span class="navtext">C</span>ommencement</li>
+                </a>
+
+                <a href="#3">
+                    <li class="animated fadeIn"><span class="navtext">R</span>ectangle</li>
+                </a>
+                <a href="#4">
+                    <li class="animated fadeIn"><span class="navtext">T</span>rajets</li>
+                </a>
+                <a href="#5">
+                    <li class="animated fadeIn"><span class="navtext">T</span>riangle</li>
+                </a>
+                <a href="#6">
+                    <li class="animated fadeIn"><span class="navtext">S</span>tylo</li>
+                </a>
+                <a href="#7">
+                    <li class="animated fadeIn"><span class="navtext">L</span>igne</li>
+                </a>
+                <a href="#8">
+                    <li class="animated fadeIn"><span class="navtext">A</span>rcs</li>
+                </a>
+                <a href="#9">
+                    <li class="animated fadeIn"><span class="navtext">C</span>ouleurs</li>
+                </a>
+            </ul>
+        </nav>
+    </div>
+
+</header>
+
+<body>
+    <div id="p">
+        <div id="1">
+            <h1>L'élément &lt;Canvas&gt;</h1></div>
+
+        <p>
+            Commençons par examiner l'élément &lt;canvas&gt;, celui-ci commence toujours par une balise inscrite dans votre HTML:
+        </p>
+        <pre class="language-html line-numbers"><code>&lt;html&gt;
+  &lt;body onload="draw();"&gt;
+    &lt;canvas id="canvas" width="150" heigth="150"&gt; &lt;/canvas&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+        <p>
+            L'élément &lt;canvas&gt; a seulement deux attributs: <span class="IT">width</span> et <span class="IT">height</span> ("largeur" et "hauteur"). Ces deux attributs sont optionnels et peuvent aussi être configuré à travers le <span class="IT">DOM</span>.<br/>            Quand les attributs <span class="IT">width</span> et <span class="IT">height</span> ne sont pas spécifiés, le canvas sera initialement large de <span class="strong">300 pixels</span> et haut de <span class="IT">150 pixels</span>.<br/> Les
+            dimensions peuvent être modifiées par du <span class="IT">CSS</span>, mais l'image sera dessinée selon les valeurs <span class="IT">width</span> et <span class="IT">height</span> du canvas et ensuite étirée pour être affichée dans l'espace
+            donné par le <span class="IT">CSS</span>.
+        </p>
+
+        <p>
+            L'attribut id n'est pas spécifique à l'élément <span class="IT">&lt;canvas&gt;</span>, mais il est toujours mieux d'assigner une id car ça facilite beaucoup son identification dans le code javascript.
+            <br/> L'élément <span class="IT">&lt;canvas&gt;</span> peut être stylisé comme n'importe quelle image normale (marges, contours, arrière-plan, etc).<br/> Si aucun style n'est donné, il sera par défaut complètement transparent.<br/> Il faut
+            noter que peu importe quels styles sont utilisés, le style n'affectera pas l'acte de dessiner sur le canvas.
+            <br/> Point important, la balise <span class="IT">&lt;/canvas&gt;</span> doit toujours être fermée.
+        </p>
+
+        <div id="2">
+            <h4>Commençons par le commencement</h4></div>
+        <p>
+            Nous avons vu qu'il fallait donc une balise Canvas dans notre HTML, mais qu'en est-il du javascript ? Tout d'abord, nous avons besoin de savoir plusieurs choses, que le canvas est initialement vide, ça paraît simple mais si nous ne permettons pas au script
+            d'accéder au contexte du rendu, nous ne pourrons pas commencer à dessiner.
+            <br/> Ensuite, l'élément &lt;canvas&gt; à une <span class="IT">méthode</span> nommée <span class="IT">getContext()</span>, qui est utilisée pour obtenir le contexte de rendu et ses fonctions de dessin <span class="IT">getContext()</span> a
+            pour seul paramètre le type de contexte.
+            <br/> Ainsi, les graphiques, ici nous le configurerons en 2D, pour le tutoriel, mais l'élément <span class="IT">&lt;canvas&gt;</span> nous permet aussi avec une certaine technique de faire des graphismes en 3D.
+            <br/> Enfin dernier point de rappel, utilisez des variables !
+        </p>
+        <pre class="language-javascript line-numbers"><code>var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+</code></pre>
+        <p>
+            Comme expliqué précédemment, l'élément Canvas nous permet de dessiner, nous allons ici étudier les formes géographique que l'on peut faire(Rond, Carré, Triangle etc...) ainsi que certaines animations que nous pouvons ensuite faire avec.
+        </p>
+
+        <div id="3">
+            <h2>Les Rectangles</h2></div>
+
+        <p>Au contraire de <span class="IT">SVG</span>, <span class="IT">&lt;canvas&gt;</span> n'a qu'une seul forme géométrique de base: le rectangle.<br/> Tout autre forme doit être créée en combinant un ou plusieurs trajets.<br/> Heureusement, il existe
+            plusieurs fonctions pour créer des trajets qui permettent de composer des formes complexes.<br/> Commençons par les rectangles. Il y a trois fonctions qui permettent de dessiner des rectangles avec canvas :
+        </p>
+        <p><span class="surlign">fillRect(x, y, width, height)</span><br/> Dessine un rectangle rempli.</p>
+        <p><span class="surlign">strokeRect(x, y, width, height)</span><br/> Dessine les contours d'un rectangle.<br/></p>
+        <p><span class="surlign">clearRect(x, y, width, height)</span><br/> Efface l'espace rectangulaire spécifié, devenant complètement transparent.<br/></p>
+        <p>
+            Chacune de ces trois fonctions ont les mêmes paramètres. Les paramètres x et y détaillent la position du coin en haut à gauche du rectangle sur le canvas.
+            <br/> Ces coordonnées sont, bien sur, relatives à l'origine. Les paramètres width et height contiennent la taille du rectangle.
+            <br/><br/> La fonction <span class="IT">fillRect() </span>dessine un gros carré noir grand de 100 pixels par côté.<br/> La fonction <span class="IT">clearRect()</span> efface ensuite 60x60 pixels au carré. <br/> Finalement, la fonction
+            <span
+                class="IT">strokeRect()</span> est appelée pour créer un contour rectangulaire dans l'espace effacé.
+
+        </p>
+        <div class="ligneh">Partie html</div>
+        <pre class="language-html line-numbers"><code>&lt;html&gt;
+    &lt;body onload="draw();"&gt;
+      &lt;canvas id="canvas" width="150" heigth="150"&gt; &lt; /canvas&gt;
+    &lt;/body&gt;
+  &lt;/html&gt;
+</code></pre>
+        <div class="lignej">Partie javascript</div>
+        <pre class="language-javascript line-numbers"><code>function draw() {
+  var canvas = document.getElementById('canvas');
+    if (canvas.getContext) {
+      var ctx = canvas.getContext('2d');
+
+        ctx.fillRect(25,25,100,100);
+        ctx.clearRect(45,45,60,60);
+        ctx.strokeRect(50,50,50,50);
+  }
+}
+</code></pre>
+        <form action="https://codepen.io/DjAlbator/pen/ozYyZw" target="_blank">
+            <input type="submit" value="Vérifiez par vous même" />
+        </form>
+
+        <div id="4">
+            <h2>Dessiner des trajets</h2></div>
+        <p> Créer des formes géométriques en utilisant des trajets nécessite un peu plus d'étapes. Il faut commencer par l'initialiser pour obtenir une page vierge. En plus il faut utiliser des fonctions de dessin pour le spécifier. Lorsqu'il est complété,
+            il faut fermer le trajet. Finalement, il faut soit remplir ou tracer pour afficher le trajet. Voici les fonctions pour faire tout cela :
+            <br/> <br/>
+            <span class="surlign">  beginPath() :</span><br/> Initialise un nouveau trajet. Lorsque initialisé, les futures fonctions de dessin sont dirigées et utilisées pour spécifier le trajet.
+            <br/><br/>
+            <span class="surlign">  closePath() :</span><br/> Ferme le trajet pour que les futures fonctions de dessin soit dirigées vers le contexte à nouveau.
+            <br/> <br/>
+            <span class="surlign">  stroke() :</span><br/> Dessine le trajet en traçant son contour.
+            <br/> <br/>
+            <span class="surlign">  fill() :</span><br/> Dessine une forme en remplissant aussi l'intérieur du trajet.
+        </p>
+
+
+        <p>La première étape pour créer un trajet est d'appeler <span class="IT">beginPath()</span>. Intérieurement, les trajets sont gardés en mémoire en forme d'une liste de sous-trajets (lignes, arcs, etc) qui tous ensembles deviennent une forme. Chaque
+            fois que cette méthode est appelée, la liste est remise à zéro, et nous pouvons dessiner de nouvelles formes.</p>
+
+        <p>La deuxième étape est d'appeler les méthodes qui spécifient les sous-trajets à dessiner.</p>
+
+        <p>La troisième étape est optionnelle. Il s'agit d'appeler <span class="IT">closePath()</span>. Cette méthode essaye de fermer la forme géométrique en dessinant une ligne droite à partir de la position courante jusqu'au début du trajet. Si la forme
+            a déjà été fermée ou s'il y a un seul point dans la liste, cette fonction ne fait rien.</p>
+
+        <div id="5">
+            <h2>Dessiner un triangle</h2></div>
+
+        <p>Par exemple, le code pour dessiner un triangle ressemble à ça :</p>
+        <div class="ligneh">Partie html</div>
+        <pre class="language-html line-numbers"><code>&lt;html&gt;
+  &lt;body onload="draw();"&gt;
+    &lt;canvas id="canvas" width="150" heigth="150"&gt; &lt;/canvas&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+        <div class="lignej">Partie javascript</div>
+        <pre class="language-javascript line-numbers"><code>function draw() {
+  var canvas = document.getElementById('canvas');
+  if (canvas.getContext){
+    var ctx = canvas.getContext('2d');
+
+      ctx.beginPath();
+      ctx.moveTo(75,50);
+      ctx.lineTo(100,75);
+      ctx.lineTo(100,25);
+      ctx.fill();
+  }
+}
+</code></pre>
+        <form action="https://codepen.io/DjAlbator/pen/zKoaEq" target="_blank">
+            <input type="submit" value="Vérifiez par vous même" />
+        </form>
+
+        <div id="6">
+            <h2>Déplacer le stylo</h2></div>
+
+        <p>Une fonction très utile, qui ne dessine rien mais qui fait tout de même parti de la liste de trajets décrite plus haut, est la fonction <span class="IT">moveTo()</span>. Une bonne manière de l'imaginer est de lever un stylo et de venir le placer
+            sur un point d'une feuille puis de le déplacer vers un autre.
+        </p>
+        <span class="surlign">moveTo(x, y)</span>
+        <p>Déplace le stylo aux coordonnées x et y.</P>
+
+        <p>
+            Lorsque le canvas est initialisé ou <span class="IT">beginPath()</span> est appelé, il est typique d'utiliser <span class="IT">moveTo()</span> pour placer la position de départ quelque part d'autre.
+            <br/><br/> Nous pourrions aussi utiliser <span class="IT">moveTo()</span> pour dessiner des trajets qui ne sont pas connectés. Dans l'image du bonhomme sourire ci-dessous, les déplacements par la méthode <span class="IT">moveTo()</span> sont
+            indiqués par les lignes rouges.
+            <br/><br/> Si vous voulez voir par vous-même, vous pouvez utiliser l'extrait de code ci-dessous. Collez-le tout simplement dans la <span class="IT">fonction draw()</span> que nous avons vu plus tôt.
+            <div class="ligneh">Partie html</div>
+            <pre class="language-html line-numbers"><code>&lt;html&gt;
+  &lt;body onload="draw();"&gt;
+    &lt;canvas id="canvas" width="150" heigth="150"&gt; &lt;/canvas&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+            <div class="lignej">Partie javascript</div>
+            <pre class="language-javascript line-numbers"><code>function draw() {
+  var canvas = document.getElementById('canvas');
+  if (canvas.getContext){
+    var ctx = canvas.getContext('2d');
+
+    ctx.beginPath();
+    ctx.arc(75,75,50,0,Math.PI*2,true); // Cercle exterieur
+    ctx.moveTo(110,75);
+    ctx.arc(75,75,35,0,Math.PI,false);   // Bouche (sens horaire)
+    ctx.moveTo(65,65);
+    ctx.arc(60,65,5,0,Math.PI*2,true);  // Oeil gauche
+    ctx.moveTo(95,65);
+    ctx.arc(90,65,5,0,Math.PI*2,true);  // Oeil droit
+    ctx.stroke();
+  }
+}
+</code></pre>
+            <form action="http://codepen.io/DjAlbator/pen/XjNYzd" target="_blank">
+                <input type="submit" value="Vérifiez par vous même" />
+            </form>
+
+            <div id="7">
+                <h2>Les lignes</h2></div>
+            <p>
+                Pour dessiner des lignes droites, utilisez la méthode <span class="IT">lineTo().</span>
+                <br/><br/>
+                <span class="surlign">lineTo(x, y)</span>
+                <br/> Dessine une ligne de la position de dessin courante à la position spécifiée par x et y.
+                <br/> <br/> Cette méthode prend deux arguments, x et y, qui sont les coordonnées du point auquel se termine la ligne. Le point de départ dépend des chemins précédemment tracés, où le point d'arrivée du chemin précédent est le point de
+                départ du suivant, etc. Le point de départ peut aussi être changé en utilisant la méthode <span class="IT">moveTo()</span>.
+                <br/><br/> L'exemple de code ci-dessous dessine deux triangles, un rempli et un avec un contour.</p>
+            <div class="ligneh">Partie html</div>
+            <pre class="language-html line-numbers"><code>&lt;html&gt;
+  &lt;body onload="draw();"&gt;
+    &lt;canvas id="canvas" width="150" heigth="150"&gt; &lt;/canvas&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+            <div class="lignej">Partie javascript</div>
+            <pre class="language-javascript line-numbers"><code >function draw() {
+  var canvas = document.getElementById('canvas');
+  if (canvas.getContext){
+    var ctx = canvas.getContext('2d');
+
+    // Triangle plein
+    ctx.beginPath();
+    ctx.moveTo(25,25);
+    ctx.lineTo(105,25);
+    ctx.lineTo(25,105);
+    ctx.fill();
+
+    // Triangle avec contour
+    ctx.beginPath();
+    ctx.moveTo(125,125);
+    ctx.lineTo(125,45);
+    ctx.lineTo(45,125);
+    ctx.closePath();
+    ctx.stroke();
+  }
+}
+</code></pre>
+            <form action="http://codepen.io/DjAlbator/pen/gwLKXj" target="_blank">
+                <input type="submit" value="Vérifiez par vous même" />
+            </form>
+            <div id="8">
+                <h2> Les arcs </h2></div>
+            <p>
+                Pour dessiner des arcs ou des cercles, on utilise la méthode arc(). Vous pouvez également utiliser <span class="IT">arcTo()</span>, mais ses implémentations sont quelque peu moins fiables, et nous n'en parlerons donc pas ici.
+                <br/> <br/>
+                <span class="surlign">arc(x, y, radius, startAngle, endAngle, anticlockwise)</span>
+                <br/> Dessine un arc de cercle.
+                <br/><br/>
+                <span class="surlign">arcTo(x1, y1, x2, y2, radius)</span>
+                <br/> Dessine un arc avec les points et le rayon de contrôle donné , relié au point précédent par une ligne droite.
+                <br/><br/> Cette méthode prend cinq paramètres : x et y sont les coordonnées du centre du cercle sur lequel l'arc doit être tracé. La signification du paramètre rayon est évidente. Les paramètres <span class="IT">startAngle</span> et
+                <span
+                    class="IT">endAngle</span> définissent les points de départ et d'arrivée de l'arc en radian, en suivant la courbe du cercle. Ceux-ci sont mesurés à partir de l'axe des abscisses. Le paramètre <span class="IT">anticlockwise</span> est une valeur booléenne
+                    qui, lorsqu'égale à true, dessine l'arc dans le sens antihoraire; dans le cas contraire, l'arc est dessiné dans le sens horaire.
+                    <br/><br/> L'exemple suivant est un peu plus complexe que ceux que nous avons vu plus haut. Il dessine 12 arcs différents, avec des remplissages et angles différents.
+                    <br/><br/> Les deux <span class="IT">boucles for</span> bouclent sur les lignes et les colonnes des arcs.
+                    <br/> Pour chaque arc, nous commençons un nouveau chemin en appelant <span class="IT">beginPath()</span>.
+                    <br/> Dans le code, chacun des paramètres dans l'arc est une variable pour des raisons de clarté, mais en réalité, il n'est pas nécessaire d'en utiliser autant.
+                    <br/> Les coordonnées x et y devraient être claires.
+                    <br/>
+                    <span class="IT">Radius</span> et <span class="IT">startAngle</span> sont fixés. <br/>
+                    <span class="IT">EndAngle</span> commence à 180 degrés (demi-cercle) dans la première colonne et est augmenté par pas de 90 degrés, pour finir par un cercle complet dans la dernière colonne. L'expression du paramètre clockwise vient
+                    du fait que la première et la troisième ligne sont dessinées dans le sens horaire, tandis que la deuxième et quatrième sont dessinées dans le sens antihoraire. Enfin, le if nous permet de tracer des arcs avec contours dans la moitié
+                    haute, et des arcs remplis dans la moitié basse.
+            </p>
+
+
+            <div class="ligneh">Partie html</div>
+            <pre class="language-html line-numbers"><code>&lt;html&gt;
+  &lt;body onload="draw();"&gt;
+    &lt;canvas id="canvas" width="150" heigth="150"&gt; &lt;/canvas&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+            <div class="lignej">Partie javascript</div>
+            <pre class="language-javascript line-numbers"><code>function draw() {
+  var canvas = document.getElementById('canvas');
+  if (canvas.getContext){
+    var ctx = canvas.getContext('2d');
+
+    for(var i=0;i<4;i++){
+      for(var j=0;j<3;j++){
+        ctx.beginPath();
+        var x = 25+j*50; // Coordonnée x
+        var y = 25+i*50; // Coordonnée x
+        var radius = 20; // rayon de l&#146;arc
+        var startAngle = 0; // Point de départ sur le cercle
+        var endAngle = Math.PI+(Math.PI*j)/2; // Point d&#146;arrivée sur le cercle
+        var anticlockwise = i%2==0 ? false : true; // clockwise or anticlockwise (Horaire ou antihoraire)
+
+        ctx.arc(x, y, radius, startAngle, endAngle, anticlockwise);
+
+        if (i>1){
+          ctx.fill();
+        } else {
+          ctx.stroke();
+        }
+      }
+    }
+  }
+}
+</code></pre>
+            <form action="http://codepen.io/DjAlbator/pen/RGoJxr" target="_blank">
+                <input type="submit" value="Vérifiez par vous même" />
+            </form>
+
+
+    <div id="9"><h2>Les Couleurs</h2></div>
+      <p>
+          Jusqu'à présent, nous avons seulement vu des méthodes du contexte de dessin.<br/>
+          Si nous voulons appliquer des couleurs à une forme, il y a deux propriétés importantes que nous pouvons utiliser: <span class="IT">fillStyle</span> et <span class="IT">strokeStyle</span> .
+        </p>
+
+        <p>
+          <span class="surlign">fillStyle = color : </span>
+            <br/>
+              Définit le style utilisé lors du remplissage de formes.<br/><br/>
+          <span class="surlign">strokeStyle = color :</span>
+            <br/>
+              Définit le style pour les contours des formes.
+        </p>
+        <p>
+          <span class="IT">Color</span> est une chaîne représentant un élément <span class="IT">CSS &lt;color&gt;</span>, d'un objet grandient ou d'un motif.
+          <br/>
+          Nous allons examiner le gradient et la structure des objets plus tard.
+          <br/>
+          Par défaut, la couleur de remplissage et de contour sont fixées en noir(valeur de couleur CSS color).
+        </p>
+        <p>
+          Dans cet exemple, nous utilisons une nouvelle fois deux boucles for pour dessiner une grille de rectangles, chacun dans une couleur différente.
+      <br/>    Il n'y a rien de spectaculaire ici. Nous utilisons les deux variables i et j pour générer une couleur RGB unique pour chaque carré, et seulement modifier les valeurs rouges et vertes.
+      <br/>    Le canal bleu a une valeur fixe. En modifiant les canaux, vous pouvez générer toutes sortes de palettes.
+      <br/>    En augmentant les étapes, vous pouvez obtenir quelque chose qui ressemble à des palettes de couleurs que Photoshop utilise.
+        </p>
+        <div class="ligneh">Partie html</div>
+        <pre class="language-html line-numbers"><code>&lt;html&gt;
+  &lt;body onload="draw();"&gt;
+    &lt;canvas id="canvas" width="150" heigth="150"&gt; &lt;/canvas&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+        <div class="lignej">Partie javascript</div>
+        <pre class="language-javascript line-numbers"><code>function draw() {
+  var ctx = document.getElementById('canvas').getContext('2d');
+  for (var i=0;i<6;i++){
+    for (var j=0;j<6;j++){
+      ctx.fillStyle = 'rgb(' + Math.floor(255-42.5*i) + ',' +
+                       Math.floor(255-42.5*j) + ',0)';
+      ctx.fillRect(j*25,i*25,25,25);
+    }
+  }
+}
+</code></pre>
+<form action="http://codepen.io/DjAlbator/pen/rryVNq" target="_blank">
+    <input type="submit" value="Vérifiez par vous même" />
+</form>
+
+<p>
+  Avec ces informations vous devriez être en mesure de réaliser notre Atelier.
+</p>
+    </div>
+
+    <script type="text/javascript" src="couleur/coloration.js"></script>
+    <a href="../../../index.html#trois"><i id="back" class="fa fa-angle-double-left" aria-hidden="true"></i></a>
+</body>
+
+</html>
