@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>Mémo</title>
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <p>
+      Jeu du Mémo, vous devez trouver les paires de cartes identiques. C'est partie!
+    </p>
+    <button id="rejouer" onclick="location.reload()">Recommencer partie</button>
+    <div id="timer">Bon jeu</div>
+    <div id="ligne1">
+      <div id="card1" onclick="showCard(card1)" class="card"></div>
+      <div id="card2" onclick="showCard(card2)" class="card"></div>
+      <div id="card3" onclick="showCard(card3)" class="card"></div>
+      <div id="card4" onclick="showCard(card4)" class="card"></div>
+      <div id="card5" onclick="showCard(card5)" class="card"></div>
+    </div>
+
+    <div id="ligne2">
+      <div id="card6" onclick="showCard(card6)" class="card"></div>
+      <div id="card7" onclick="showCard(card7)" class="card"></div>
+      <div id="card8" onclick="showCard(card8)" class="card"></div>
+      <div id="card9" onclick="showCard(card9)" class="card"></div>
+      <div id="card10" onclick="showCard(card10)" class="card"></div>
+    </div>
+
+  <div id="affichage"></div>
+  <script type="text/javascript" src="script.js" charset="utf-8"></script>
+  </body>
+</html>
