@@ -6,21 +6,23 @@ if(isset($_POST['email']) && isset($_POST['password']) && isset($_POST['confirma
     if($_POST['password'] == $_POST['confirmation']){
         // Si le mail n'est pas remplit
         if(empty($_POST['email'])){
-            // On redirige vers la page de connexion avec un message d'erreur spécifique
+            // On redirige vers le formulaire avec un message d'erreur spécifique
                 header('location:creation_compte.php?noMail');
         // Sinon si le mdp et la confirmation contiennent plus de 4 caractères
         }elseif(strlen($_POST['password']) > 4 && strlen($_POST['confirmation']) > 4){
-            //On créé un message pour indiquer à l'utilisateur qu'un mail lui a été envoyé
+            //On démarre une nouvelle session
             session_start();
             $email = $_POST['email'];
+            // on attribut une nouvelle session à l'email de l'utilisateur
             $_SESSION['user'] = $email;
+            // On crée une variable qui indiquera à l'utilisateur qu'un email lui a été envoyé.
             $loginPass = "Votre compte a bien été créé, un mail a été envoyé à ";
         }else{
-            // Sinon on redirige vers une page spécifiant que les mdp et confirmation n'ont pas assez de caractères
+            // Sinon on redirige vers le formulaire en spécifiant que les mdp et confirmation n'ont pas assez de caractères
             header('location:creation_compte.php?lenError=1');
         }
     }else{
-        // Si le mail et la confirmation ne sont pas identiques
+        // Sinon le mail et la confirmation ne sont pas identiques, on redirige vers le formulaire avec un message d'erreur ciblé
         header('location:creation_compte.php?registrationFalse=1');
     }
 }

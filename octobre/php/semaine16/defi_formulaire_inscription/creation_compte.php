@@ -1,16 +1,19 @@
 <?php
+// Fonction qui affichera le message d'erreur adéquat
 function errorMessage(){
-
+    // Si le password et la confirmation ne sont pas identiques
     if(isset($_GET['registrationFalse'])){
         echo '<div class="alert alert-danger" role="alert">Vos mot de passe ne sont pas identiques.</div>';
+        // Sinon si la longueur du password et de la confirmation est inférieure à 4 caractères
     } elseif(isset($_GET['lenError'])){
         echo '<div class="alert alert-danger" role="alert">Votre mot de passe doit faire plus de 4 caractères.</div>';
+        // Sinon si le mail n'est pas remplit
     } elseif(isset($_GET['noMail'])){
         echo '<div class="alert alert-danger" role="alert">Veuillez indiquer votre adresse de messagerie.</div>';
     }
 }
 
-
+// Fonction qui confirmera à l'utilisateur que son compte a été créé
 function ciao(){
     if(isset($_GET['seeYou'])){
         echo '<div class="alert alert-success" role="alert">Votre inscription a bien été prise en compte.</div>';
