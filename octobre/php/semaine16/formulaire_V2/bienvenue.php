@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -27,10 +28,12 @@
     <body>
         <div id="container">
             <?php
-            if($user){
+                if(isset($_SESSION['user'])){
                 echo '<header><h1>Mon Site</h1></header>';
                 echo "<h1>Bienvenue " . $user["prenom"] . " " . $user["nom"] . "</h1>";
-                echo '<a href="identification.php">Déconnexion</a>';
+                    if(isset($_SESSION['user'])){
+                        echo '<a href="fin_session.php">Déconnexion</a>';
+                    }
             }
             ?>
         </div>

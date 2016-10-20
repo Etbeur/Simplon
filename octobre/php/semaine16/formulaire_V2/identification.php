@@ -1,3 +1,12 @@
+<?php
+function errorMessage(){
+    if(isset($_GET['errorLogin']) && isset($_GET['withLogin'])){
+        echo '<div class="alert alert-danger" role="alert">Erreur lors de la connexion</div>';
+        $loginValue = 'value="'.$_GET['withLogin'].'"';
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,16 +42,8 @@
                     <div class="panel-heading">
                     <h1>Identification</h1>
                     </div>
-                    <?php
-                    if(isset($_GET['erreur']))
-                        {
-                            ?>
-                            <div class="alert alert-danger" role="alert">Erreur lors de la connexion</div>
-                            <?php
-                        }else {
-                            include 'bienvenue.php';
-                        }
-                     ?>
+                    <?php echo errorMessage(); ?>
+
                     <div class="panel-body">
                         <div class="col-md-2 control-label">Email </div>
                         <input type="email" name= "email" placeholder="Email" class="form-control"/>

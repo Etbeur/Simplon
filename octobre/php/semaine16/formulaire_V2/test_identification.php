@@ -1,9 +1,18 @@
 <?php
+session_start();
 //définition de constantes pour les données fictives de l'utilisateur
 define('USER_MAIL', "toto@gmail.com");
 define('USER_PASS', "12345");
 define('USER_LASTNAME', "Leponge");
 define('USER_FIRSTNAME', "Bob");
+
+function go($path){
+    header('location:'.$path);
+}
+
+function backToLogin($log){
+    go('identification.php'.$log);
+}
 
 $errorMessage = '';
 $savedLogin = '';
@@ -25,16 +34,16 @@ if(isset($_POST['email']) && isset($_POST['password'])){
             "mail" => USER_PASS
         ];
 
-        $loginFailed = false;
-        include 'bienvenue.php';
+        // On enregistre la session utilisateur
+        $_SESSION['user'] = $user;
+        go('bienvenue.php');
     }else{
-        // Sinon si l'email/pass ne correspondent pas on crée une variable pour l'indiquer
-        $loginFailed = true;
+
         $savedLogin = 'value="'.$login.'""';
         $errorMessage = '<div class="alert alert-danger">Erreur d\'identification</div>';
-        header("Location: identification.php?erreur=1");
+        backToLogin("?errorLogin=1&withLogin=".$login);
     }
 }else {
-    echo "Les variables du formulaire ne sont pas déclarées";
+    backToLogin("");
 }
 ?>
