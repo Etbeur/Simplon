@@ -1,0 +1,9 @@
+<!-- Fin de session lors de la déconnexion du compte utilisateur -->
+<?php
+    // On rentre la session existante
+    session_start();
+    // destroy détruit les valeurs existante dans cette session lors de la déconnexion
+    session_destroy();
+    // On redirige l'utilisateur sur la page d'accueil une fois la session terminée
+    header('location:creation_compte.php?goodBye=1');
+ ?>
