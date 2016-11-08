@@ -1,24 +1,15 @@
 <?php
 // Fonction qui affichera le message d'erreur adéquat
 function errorMessage(){
-    // Si le password n'est pas correct
-    if(isset($_GET['registrationFalse'])){
-        echo '<div class="alert alert-danger" role="alert">Votre mot de passe est inconnus</div>';
-        // Sinon si la longueur du password est inférieure à 4 caractères
-    } elseif(isset($_GET['lenError'])){
-        echo '<div class="alert alert-danger" role="alert">Votre mot de passe doit faire plus de 4 caractères.</div>';
-        // Sinon si le mail n'est pas remplit
-    } elseif(isset($_GET['noMail'])){
-        echo '<div class="alert alert-danger" role="alert">Veuillez indiquer votre adresse de messagerie.</div>';
-    }elseif(isset($_GET['mailNoExist'])){
-        echo '<div class="alert alert-danger" role="alert">Cet email n\'existe pas.</div>';
-    }
-}
-
-// Fonction qui confirmera à l'utilisateur que son compte a été créé
-function ciao(){
-    if(isset($_GET['goodBye'])){
-        echo '<div class="alert alert-success" role="alert">A bientôt sur ce site.</div>';
+    // Si le mot de passe ou le mail est incorrect
+    if(isset($_GET['ErrorPassLog'])){
+        echo '<div class="alert alert-danger" role="alert">Email ou mot de passe incorrect</div>';
+        // Sinon si des champs ne sont pas rempli
+    }elseif(isset($_GET['empty'])){
+        echo '<div class="alert alert-danger" role="alert">Veuillez remplir tous les champs</div>';
+        // Sinon si l'utilisateur se déconnecte
+    }elseif(isset($_GET['bye'])){
+        echo '<div class="alert alert-success" role="alert">A bientôt sur notre site</div>';
     }
 }
 ?>
@@ -27,7 +18,7 @@ function ciao(){
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Création compte</title>
+        <title>Connexion compte</title>
         <link rel="stylesheet" href="style.min.css" media="screen">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -40,10 +31,10 @@ function ciao(){
                     <div class="panel panel-default">
                         <div class="panel-heading">
                         <h1 class="text-center">Connexion</h1>
+                        <a id="aller_inscription" class="text-center" href="creation_compte.php">Vous n'avez pas encore de compte?</a>
                         </div>
                             <?php
                                 echo errorMessage();
-                                echo bienvenue();
                             ?>
                         <div class="panel-body">
                             <label>Adresse Email</label>

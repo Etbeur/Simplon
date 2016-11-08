@@ -21,8 +21,8 @@ if(isset($_POST['email']) && isset($_POST['password']) && isset($_POST['confirma
         }elseif(strlen($_POST['password']) > 4 && strlen($_POST['confirmation']) > 4){
             //On démarre une nouvelle session
             session_start();
-            $email = $_POST['email'];
-            $password = $_POST['password'];
+            $email = ($_POST['email']);
+            $password = ($_POST['password']);
 
             //Préparation de l'insertion des données dans la BDD. !!! INSERT INTO se fait dans la table(présente dans la bdd) que l'on souhaite remplir!!!
             $qInsertion = "INSERT INTO identifiants(mail, password) VALUES(:mail, :password)";
