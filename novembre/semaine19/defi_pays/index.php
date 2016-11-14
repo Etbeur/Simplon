@@ -1,9 +1,15 @@
 <?php
+// Fonction qui affichera les message d'erreur ou de validation
 function infosUtilisateur(){
+    // Si la page ajout critère renvoie vers index avec vide --> header('location:index.php?vide')
     if(isset($_GET['vide'])){
         echo '<div class="alert alert-danger" role="alert">Vous n\'avez pas indiqué tous les champs</div>';
+
+    // Si la page ajout critère renvoie vers index avec ajoutOk --> header('location:index.php?ajoutOk')
     }elseif(isset($_GET['ajoutOk'])){
         echo '<div class="alert alert-success" role="alert">Votre ajout est validé</div>';
+
+    // Si la page ajout critère renvoie vers index avec exist --> header('location:index.php?exist')
     }elseif(isset($_GET['exist'])){
         echo '<div class="alert alert-danger" role="alert">Valeurs déjà existantes</div>';
     }
@@ -44,6 +50,7 @@ function infosUtilisateur(){
          <form action="ajout_critere.php" method="post" class="form-inline">
              <h1 class="text-center">Informations Pays</h1>
                  <?php
+                //  Message qui s'affichera à l'écran en fonction des données saisies
                     echo infosUtilisateur();
                  ?>
             <div id="container">

@@ -1,6 +1,8 @@
 <?php
+// On inclus le fichier de connexion à la base de donnée
 include 'connexion.php';
 
+// On sélectionne les données que l'on veut depuis la BDD
 $requete = "SELECT * FROM pays";
 $result = $connexion->query($requete);
 
@@ -48,6 +50,7 @@ $result = $connexion->query($requete);
                   </tr>
 
                   <?php
+                //   Boucle while pour récupérer les données
                       while($donnee = $result->fetch() ){
                           $nomPays = $donnee['nom'];
                           $nomCapitale = $donnee['capitale'];
@@ -55,7 +58,7 @@ $result = $connexion->query($requete);
                   ?>
 
                   <tr>
-
+                     <!-- On affiche les données Pays/Capitale et drapeau. Les fonctions supprimer et modifier à venir-->
                       <td><?php echo $nomPays?></td>
                       <td><?php echo $nomCapitale?></td>
                       <td><img src="<?php echo $imgDrapeau?>"></td>
@@ -68,6 +71,7 @@ $result = $connexion->query($requete);
 
                   <?php
                         }
+                        // On ferme l'appel à la BDD
                     $result->closeCursor();
                    ?>
 
