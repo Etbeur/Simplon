@@ -4,25 +4,25 @@ include 'connexion_bdd.php';
 
 
 // vérification que les valeurs existent
-if(isset($_POST['login']) && isset($_POST['password']) && isset($_POST['confirmation'])){
+if(isset($_POST['email']) && isset($_POST['password']) && isset($_POST['confirmation'])){
     // Si le mot de passe et le mdp de confirmation sont identiques
     if($_POST['password'] == $_POST['confirmation']){
-        // Si le login n'est pas remplit
-        if(empty($_POST['login'])){
+        // Si le email n'est pas remplit
+        if(empty($_POST['email'])){
             // On redirige vers le formulaire avec un message d'erreur spécifique
                 header('location:inscription.php?noLog');
         // Sinon si le mdp et la confirmation contiennent plus de 4 caractères
         }elseif(strlen($_POST['password']) > 4 && strlen($_POST['confirmation']) > 4){
 
             // On stock les informations dans des variables
-            $login = $_POST['login'];
+            $email = $_POST['email'];
             $password = $_POST['password'];
 
             //Préparation de l'insertion des données dans la BDD. !!! INSERT INTO se fait dans la table(présente dans la bdd) que l'on souhaite remplir
-            $qInsertion = "INSERT INTO utilisateurs(login, password) VALUES(:login, :password)";
+            $qInsertion = "INSERT INTO utilisateurs(email, password) VALUES(:email, :password)";
             $req = $connexion->prepare($qInsertion);
 
-            $req->bindParam(":login", $login, PDO::PARAM_STR);
+            $req->bindParam(":email", $email, PDO::PARAM_STR);
             $req->bindParam(":password", $password, PDO::PARAM_STR);
             $req->execute();
 
@@ -34,7 +34,7 @@ if(isset($_POST['login']) && isset($_POST['password']) && isset($_POST['confirma
             header('location:inscription.php?lenError=1');
         }
     }else{
-        // Sinon le mail et la confirmation ne sont pas identiques, on redirige vers le formulaire avec un message d'erreur ciblé
+        // Sinon l'email et la confirmation ne sont pas identiques, on redirige vers le formulaire avec un message d'erreur ciblé
         header('location:inscription.php?registrationFalse=1');
     }
 }

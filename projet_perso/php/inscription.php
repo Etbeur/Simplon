@@ -7,7 +7,7 @@ function errorMessage(){
         // Sinon si la longueur du password et de la confirmation est inférieure à 4 caractères
     } elseif(isset($_GET['lenError'])){
         echo '<div class="alert alert-danger" role="alert">Votre mot de passe doit faire plus de 4 caractères.</div>';
-        // Sinon si le login n'est pas remplit
+        // Sinon si l'email n'est pas remplit
     } elseif(isset($_GET['noLog'])){
         echo '<div class="alert alert-danger" role="alert">Veuillez indiquer un login</div>';
     }
@@ -47,8 +47,8 @@ function errorMessage(){
                         ?>
 
                         <div class="panel-body">
-                            <label>Login</label>
-                            <input type="text" name= "login" placeholder="Login" class="form-control"/></br>
+                            <label>Email</label>
+                            <input type="email" name= "email" placeholder="Email" class="form-control"/></br>
 
                             <label>Password </label>
                             <input type="password" name="password" placeholder="Password" class="form-control"/></br>

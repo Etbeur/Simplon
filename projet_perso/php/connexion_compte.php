@@ -7,7 +7,7 @@ function message(){
     // Si l'inscription est bonne
     if(isset($_GET['registrationTrue'])){
         echo '<div class="alert alert-success" role="alert">Votre inscription a bien été prise en compte, vous pouvez maintenant vous connecter.</div>';
-    // Si le login ou mdp est inccorect
+    // Si l'email ou mdp est inccorect
     }elseif(isset($_GET['ErrorPassLog'])){
         echo '<div class="alert alert-danger" role="alert">Login ou mot de passe incorrect.</div>';
         // Si les champs sont vides
@@ -37,7 +37,7 @@ function message(){
         </nav>
 
         <!-- Formulaire de connexion -->
-        
+
         <form action="valide_connexion.php" method="post" class="form-horizontal">
         <div class ="container">
             <div class="row">
@@ -50,8 +50,8 @@ function message(){
                         <?php echo message() ?>
                         </div>
                         <div class="panel-body">
-                            <label>Login</label>
-                            <input type="text" name= "login" placeholder="Login" class="form-control"/></br>
+                            <label>Email</label>
+                            <input type="email" name= "email" placeholder="Email" class="form-control"/></br>
 
                             <label>Password </label>
                             <input type="password" name="password" placeholder="Password" class="form-control"/></br>
