@@ -67,7 +67,6 @@ session_start();
       </tr>
     </table>
 
-
 <script type="text/javascript" src="../JS/script.js"></script>
 </body>
 </html>

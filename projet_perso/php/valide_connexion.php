@@ -65,5 +65,11 @@ if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['password']
         ?>
 
         </div>
+
+        <footer id="pied_de_page">
+            <p>
+                Designed and created by <a href="https://github.com/etbeur">Etbeur</a> - 2016
+            </p>
+        </footer>
     </body>
 </html>

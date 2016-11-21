@@ -24,7 +24,7 @@ function message(){
     <head>
         <meta charset="utf-8">
         <title>Connexion à mon compte</title>
-        <link rel="stylesheet" href="../css/style_compte.min.css">
+        <link rel="stylesheet" href="../css/style_compte_connexion.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     </head>
@@ -38,7 +38,7 @@ function message(){
 
         <!-- Formulaire de connexion -->
 
-        <form action="valide_connexion.php" method="post" class="form-horizontal">
+    <form action="valide_connexion.php" method="post" class="form-horizontal">
         <div class ="container">
             <div class="row">
                 <div class="col-md-6 col-md-offset-4">
@@ -62,5 +62,12 @@ function message(){
                 </div>
             </div>
         </div>
+    </form>
+
+    <footer id="pied_de_page">
+        <p>
+            Designed and created by <a href="https://github.com/etbeur">Etbeur</a> - 2016
+        </p>
+    </footer>
     </body>
 </html>

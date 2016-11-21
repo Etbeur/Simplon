@@ -16,6 +16,14 @@
                 <li><a href="connexion_compte.php" id="compte">Mon compte</a></li>
             </ul>
         </nav>
-        <p>Cette page est en cours de réalisation, merci de revenir ultérieurement. Merci de votre compréhension.</p>
+
+        <span id="en_cours">Cette page est en cours de réalisation, merci de revenir ultérieurement. Merci de votre compréhension.</span>
+
+
+        <footer id="pied_de_page">
+            <p>
+                Designed and created by <a href="https://github.com/etbeur">Etbeur</a> - 2016
+            </p>
+        </footer>
     </body>
 </html>

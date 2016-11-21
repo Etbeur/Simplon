@@ -41,7 +41,11 @@ session_start();
         <a class="lien_nav" href= "connexion_compte.php" id="compte">Mon compte</a>
     </nav>
 
-
+    <footer id="pied_de_page">
+        <p>
+            Designed and created by <a href="https://github.com/etbeur">Etbeur</a> - 2016
+        </p>
+    </footer>
 
 <script type="text/javascript" src="script.js"></script>
 </body>

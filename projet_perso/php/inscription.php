@@ -19,7 +19,7 @@ function errorMessage(){
     <head>
         <meta charset="utf-8">
         <title>Créer un compte ou se connecter</title>
-        <link rel="stylesheet" href="../css/style_compte.min.css">
+        <link rel="stylesheet" href="../css/style_compte_inscription.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     </head>
@@ -63,5 +63,11 @@ function errorMessage(){
                 </div>
             </div>
         </div>
+
+        <footer id="pied_de_page">
+            <p>
+                Designed and created by <a href="https://github.com/etbeur">Etbeur</a> - 2016
+            </p>
+        </footer>
     </body>
 </html>
