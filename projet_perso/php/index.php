@@ -18,7 +18,7 @@ session_start();
         <div class="infos_user">
             <?php
                 // Si aucune session n'est active (utilisateur non connecté), on le précise
-                if(!$_SESSION['user']){
+                if(!isset($_SESSION['user'])){
                     echo '<p>Vous êtes actuellement sur le site en tant que visiteur.</p>';
                 // Si une session est existante, on crée un boutton de déconnexion et on indique au visiteur qu'il est connecté
                 }else{
