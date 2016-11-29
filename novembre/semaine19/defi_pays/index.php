@@ -3,8 +3,7 @@
 function infosUtilisateur(){
     // Si la page ajout critère renvoie vers index avec vide --> header('location:index.php?vide')
     if(isset($_GET['vide'])){
-        echo '<div class="alert alert-danger" role="alert">Vous n\'avez pas indiqué tous les champs</div>';
-
+        echo '<div class="alert alert-danger" role="alert">Vous n\'avez pas indiqué tous les champs pour l\'ajout d\'un pays</div>';
     // Si la page ajout critère renvoie vers index avec ajoutOk --> header('location:index.php?ajoutOk')
     }elseif(isset($_GET['ajoutOk'])){
         echo '<div class="alert alert-success" role="alert">Votre ajout est validé</div>';
@@ -12,6 +11,10 @@ function infosUtilisateur(){
     // Si la page ajout critère renvoie vers index avec exist --> header('location:index.php?exist')
     }elseif(isset($_GET['exist'])){
         echo '<div class="alert alert-danger" role="alert">Valeurs déjà existantes</div>';
+
+    // Si le champ langue est vide
+    }elseif(isset($_GET['langueVide'])){
+        echo '<div class="alert alert-danger" role="alert">Le champ langue est resté vide</div>';
     }
 }
 ?>
@@ -39,7 +42,7 @@ function infosUtilisateur(){
             }
             #container2{
                 text-align: center;
-                margin-bottom: 20px;
+                margin-top: 20px;
             }
             .form-group{
                 margin-left: 10px;
@@ -68,13 +71,17 @@ function infosUtilisateur(){
                  </div>
                      <button type="submit" class="btn btn-default" name="valider_infos">Valider</button>
              </div>
+
+             <?php include 'affichage.php';?>
+
              <div id="container2">
                  <div class="form-group">
                      <label>Langue(s)</label>
                      <input type="text" name="langue" placeholder="Langue(s) parlée(s)" class=" form-control"/></br>
+                     <input type="hidden" name="modifier" value="modif">
                  </div>
                     <button type="submit" class="btn btn-default" name="valider_langue">Valider</button>
              </div>
-             <?php include 'affichage.php';?>
+         </form>
      </body>
  </html>

@@ -19,6 +19,7 @@ if(!empty($_POST['nom']) && !empty($_POST['capitale']) && !empty($_POST['drapeau
         $rqt->bindParam(":drapeau", $drapeau, PDO::PARAM_STR);
 
         $existante = $rqt->execute();
+
         // On redirige vers la page d'accueil avec un message de validation
         header('location:index.php?ajoutOk');
     }
@@ -28,7 +29,7 @@ if(!empty($_POST['nom']) && !empty($_POST['capitale']) && !empty($_POST['drapeau
 }
 
 // On vérifie si les données rentrées sont déjà présentes dans la BDD
-if(count($existante) == 1){
+if($existante == false){
     // On redirige sur la page d'accueil avec un message d'erreur
     header('location:index.php?exist');
 }
@@ -50,7 +51,7 @@ if(!empty($_POST['langue'])){
         header('location:index.php?ajoutOk');
     }
 // Si le champ n'est pas remplit on redirige sur la page d'accueil avec un msg d'erreur
-}else{
-    header('location:index.php?vide');
+}elseif(empty($_POST['langue']) && empty($_POST['nom']) && empty($_POST['capitale']) && empty($_POST['drapeau'])){
+    header('location:index.php?langueVide');
 }
 ?>
