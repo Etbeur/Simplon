@@ -1,0 +1,40 @@
+{
+    "produits" : [
+        {
+            "nom": "Chaussettes",
+            "prixHT": "4€"
+        },
+        {
+            "nom": "Gants",
+            "prixHT": "12€"
+        },
+        {
+            "nom": "Manteau",
+            "prixHT": "200€"
+        },
+        {
+            "nom": "Pantalon",
+            "prixHT": "20€"
+        },
+        {
+            "nom": "Pull",
+            "prixHT": "35€"
+        },
+        {
+            "nom": "Gilet",
+            "prixHT": "25€"
+        },
+        {
+            "nom": "Bonnet",
+            "prixHT": "9€"
+        },
+		{
+			"nom": "Tee-shirt",
+            "prixHT": "14€"
+		},
+		{
+			"nom": "Collant",
+            "prixHT": "5€"
+		}
+    ]
+}

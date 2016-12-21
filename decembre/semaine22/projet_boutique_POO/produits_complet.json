@@ -1,0 +1,58 @@
+{
+    "produits" : [
+        {
+            "nom": "Chaussettes",
+            "couleur": "Noir",
+            "taille": "42/44",
+            "prixHT": "4"
+        },
+        {
+            "nom": "Gants",
+            "couleur": "Gris",
+            "taille": "M",
+            "prixHT": "12"
+        },
+        {
+            "nom": "Manteau",
+            "couleur": "Beige",
+            "taille": "38",
+            "prixHT": "200"
+        },
+        {
+            "nom": "Pantalon",
+            "couleur": "Bleu marine",
+            "taille": "40",
+            "prixHT": "20"
+        },
+        {
+            "nom": "Pull",
+            "couleur": "Blanc",
+            "taille": "40",
+            "prixHT": "35"
+        },
+        {
+            "nom": "Gilet",
+            "couleur": "Vert",
+            "taille": "L",
+            "prixHT": "25"
+        },
+        {
+            "nom": "Bonnet",
+            "couleur": "Bleu",
+            "taille": "S",
+            "prixHT": "9"
+        },
+		{
+			"nom": "Tee-shirt",
+            "couleur": "Rouge",
+            "taille": "M",
+            "prixHT": "14"
+		},
+		{
+			"nom": "Collant",
+            "couleur": "Noir",
+            "taille": "M",
+            "prixHT": "5"
+		}
+    ]
+}
