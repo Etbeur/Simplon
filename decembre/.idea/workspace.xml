@@ -61,6 +61,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 7 for localhost">
     <include_path>
       <path value="$PROJECT_DIR$/blog_twig/vendor/twig/twig" />
@@ -189,6 +192,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="31d9391d-9a99-4c33-be52-65c9230c47ea" name="Default" comment="" />
@@ -199,12 +205,12 @@
       <workItem from="1482830048902" duration="19162000" />
       <workItem from="1482916225260" duration="1865000" />
       <workItem from="1483015711886" duration="623000" />
-      <workItem from="1483371622597" duration="732000" />
+      <workItem from="1483371622597" duration="907000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22382000" />
+    <option name="totallyTimeSpent" value="22557000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
