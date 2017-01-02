@@ -1,0 +1,46 @@
+{
+    "produits" : [
+        {
+            "nom": "chaussettes",
+            "couleur": "noir",
+            "taille": "38/40",
+            "prixHT": "5"
+        },
+        {
+            "nom": "gants",
+            "couleur": "marron",
+            "taille": "M",
+            "prixHT": "12"
+        },
+        {
+            "nom": "manteau",
+            "couleur": "camel",
+            "taille": "38",
+            "prixHT": "200"
+        },
+        {
+            "nom": "pantalon",
+            "couleur": "aubergine",
+            "taille": "40",
+            "prixHT": "20"
+        },
+        {
+            "nom": "pull",
+            "couleur": "blanc",
+            "taille": "40",
+            "prixHT": "35"
+        },
+        {
+            "nom": "gilet",
+            "couleur": "corail",
+            "taille": "L",
+            "prixHT": "25"
+        },
+        {
+            "nom": "bonnet",
+            "couleur": "bleu",
+            "taille": "S",
+            "prixHT": "9"
+        }
+    ]
+}

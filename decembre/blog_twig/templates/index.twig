@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+<h1>{{ title }}</h1>
+
+<h2>Articles</h2>
+{% for article in liste_articles %}
+    <a href="index.php?articleId=">{{ article }}</a><br/><hr/>
+{% endfor %}
+<footer>{{ now|date('d-m-Y') }}</footer>
+</body>
+</html>
