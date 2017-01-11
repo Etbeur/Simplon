@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+    Vive la POO
+{% endblock %}
+    {% block body %}
+        <h1>Vive la POO</h1>
+        {% for article in articles %}
+            <a href="/details/{{ article.id }}" >{{ article.title }}</a><hr>
+        {% endfor %}
+        <p>Nous sommes le {{ "now"|date('d-m-Y') }}, il est {{ "now"|date('H:i:s') }}</p>
+    {% endblock %}

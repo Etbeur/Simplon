@@ -7,11 +7,11 @@
  */
 
 spl_autoload_register(function($class){
-    include "app/" .$class. ".php";
-});
+    include "app/".$class.".php";
+} );
 
-$loader = new BlogJsonLoader();
-$articles = $loader->load('blog.json');
+$loader = new BlogCSVLoader();
+$articles = $loader->load('blog2.csv');
 $blog = new Blog('Vive la POO', $articles);
 
 ?>

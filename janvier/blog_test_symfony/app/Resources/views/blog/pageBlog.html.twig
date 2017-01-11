@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+    Vive la POO
+{% endblock %}
+{% block body %}
+        <h2>{{ article.title }}</h2>
+        <p>{{ article.content }}</p>
+        <p>{{ article.author }} le {{ article.publicationDate.format("d-m-Y") }}</p>
+{% endblock %}

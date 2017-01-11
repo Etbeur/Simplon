@@ -5,17 +5,28 @@
  * Date: 03/01/17
  * Time: 15:02
  */
+namespace AppBundle\Controller;
 
-class BlogJsonLoader implements IBlogLoader{
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\Response;
+use AppBundle\Model\Author;
+use AppBundle\Model\Article;
+use AppBundle\Controller\IBlogLoader;
+
+
+class BlogJsonLoader {
     /**
      * @param String $path
      * @return array
      */
+
     public function load(String $path):array
     {
         $rawData = file_get_contents($path);
         return $this->parse($rawData);
     }
+
     /**
      * parse les données JSON et renvoie une liste d'articles
      * @param String $rawData donnees json_decodées
@@ -43,7 +54,7 @@ class BlogJsonLoader implements IBlogLoader{
                 $rawArticle['title'],
                 $rawArticle['content'],
                 $articleAuthor,
-                new DateTime($rawArticle['date'])
+                new \DateTime($rawArticle['date'])
             );
         }, $rawArticles);
         return $articles;
