@@ -8,7 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use AppBundle\Model\Article;
-use AppBundle\Model\Author;
+use AppBundle\Entity\Author;
 use AppBundle\Controller\IBlogLoader;
 use AppBundle\Controller\BlogJsonLoader;
 use AppBundle\Controller\BlogCSVLoader;
@@ -70,10 +70,13 @@ class DefaultController extends Controller
      */
 
     public function  randomAction(Request $request){
-        $author = new Authors();
-        $author->setFirstname('jack');
-        $author->setLastname('daniels');
-        $author->setEmail('j.daniels@gmail.com');
+
+
+
+        $author = new Author();
+        $author->setFirstname('damien');
+        $author->setLastname('trams');
+        $author->setEmail('d.trams@gmail.com');
 
         $entry = $this->getDoctrine()->getManager();
         $entry->persist($author);
