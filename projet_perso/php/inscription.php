@@ -3,13 +3,13 @@
 function errorMessage(){
     // Si le password et la confirmation ne sont pas identiques
     if(isset($_GET['registrationFalse'])){
-        echo '<div class="alert alert-danger" role="alert">Vos mots de passe ne sont pas identiques.</div>';
+        return '<div class="alert alert-danger" role="alert">Vos mots de passe ne sont pas identiques.</div>';
         // Sinon si la longueur du password et de la confirmation est inférieure à 4 caractères
     } elseif(isset($_GET['lenError'])){
-        echo '<div class="alert alert-danger" role="alert">Votre mot de passe doit faire plus de 4 caractères.</div>';
+        return '<div class="alert alert-danger" role="alert">Votre mot de passe doit faire plus de 4 caractères.</div>';
         // Sinon si l'email n'est pas remplit
     } elseif(isset($_GET['noLog'])){
-        echo '<div class="alert alert-danger" role="alert">Veuillez indiquer un login</div>';
+        return '<div class="alert alert-danger" role="alert">Veuillez indiquer un login</div>';
     }
 }
 

@@ -6,16 +6,16 @@ session_start();
 function message(){
     // Si l'inscription est bonne
     if(isset($_GET['registrationTrue'])){
-        echo '<div class="alert alert-success" role="alert">Votre inscription a bien été prise en compte, vous pouvez maintenant vous connecter.</div>';
+        return '<div class="alert alert-success" role="alert">Votre inscription a bien été prise en compte, vous pouvez maintenant vous connecter.</div>';
     // Si l'email ou mdp est inccorect
     }elseif(isset($_GET['ErrorPassLog'])){
-        echo '<div class="alert alert-danger" role="alert">Login ou mot de passe incorrect.</div>';
+        return '<div class="alert alert-danger" role="alert">Login ou mot de passe incorrect.</div>';
         // Si les champs sont vides
     }elseif(isset($_GET['empty'])){
-        echo '<div class="alert alert-danger" role="alert">Vous n\'avez pas renseigné votre login et votre mot de passe.</div>';
+        return '<div class="alert alert-danger" role="alert">Vous n\'avez pas renseigné votre login et votre mot de passe.</div>';
     // Si l'utilisateur se déconnecte
     }elseif(isset($_GET['bye'])){
-        echo '<div class="alert alert-success" role="alert">Vous êtes à présent déconnecté, à bientôt.</div>';
+        return '<div class="alert alert-success" role="alert">Vous êtes à présent déconnecté, à bientôt.</div>';
     }
 }
 ?>
