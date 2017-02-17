@@ -1,1 +1,21 @@
-<h1>Tout marche bien pour le moment!</h1>
+{% extends 'base.html.twig' %}
+
+{% block title %}My page {% endblock %}
+
+{% block body %}
+    <h1>Tout marche bien pour le moment! {{ name }}</h1>
+
+{{ form_start(formulaire, {'method':'get', 'attr': {'id': 'toto', 'novalidate': 'novalidate', 'class': 'form form-inline'}}) }}
+
+<div class="errors">
+    {{ form_errors(formulaire) }}
+</div>
+
+    {{ form_row(formulaire.name) }}
+
+{{ form_widget(formulaire.submit) }}
+{{ form_widget(formulaire.delete) }}
+
+{{ form_end(formulaire) }}
+{% endblock %}
+

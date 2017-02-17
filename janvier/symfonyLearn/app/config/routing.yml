@@ -1,3 +1,10 @@
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
+
+page:
+    resource: "@PageBundle/Controller/"
+    type:     annotation
+    prefix:   /MyPage
+
+
